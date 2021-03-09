@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Under Review</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/notesunderreview/notesunderreview.css">
+    <link rel="stylesheet" href="css/notesunderreview/responsive.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg  bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/navbarbanner.png" alt="logo" class="img-responsive">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">&#9776;</span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown-1" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Dashboard
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown-1">
+                                <a class="dropdown-item" href="notesunderreview.html">Notes Under Review</a>
+                                <a class="dropdown-item" href="publishednotes.html">Published Notes</a>
+                                <a class="dropdown-item" href="downloadednotes.html">Downloaded Notes</a>
+                                <a class="dropdown-item" href="rejectednotes.html">Rejected Notes</a>
+
+                            </div>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_notedetails.html">Notes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="members.html">Members</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown-2" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Reports
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown-2">
+                                <a class="dropdown-item" href="spamreport.html">Spam Reports</a>
+
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Setting</a>
+
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="images/Dashboard/user-img.png" alt="client" class="rounded-circle seller">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Update Profile</a>
+
+                                <a class="dropdown-item" href="#">Change Password</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" style="color: #6255a5;">Logout</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <form class="form-inline">
+
+                                <button class="btn btn-outline-success btn-navbar" type="submit">Logout</button>
+                            </form>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+    <div class="flex-shrink-0" id="padding-navbar">
+        <div class="container">
+
+            <div class="notes-underreview">
+
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-12">
+                        <div class="heading">
+                            <h2>Notes Under Review</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-12">
+                        <div class="form-group">
+                            <label for="inputSeller" id="seller-label">Seller</label>
+                            <select id="inputSeller" class="form-control custom-select">
+                                <option selected>Khyati</option>
+                                <option>..</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-12 col-12">
+                        <form class="form-inline">
+                            <div id="search-box">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                                    aria-label="Search" id="search">
+                                <img src="images/Dashboard/search.jpg" alt="search" class="search-icon">
+                            </div>
+                            <div id="search-btn">
+                                <button class="btn btn-search" type="submit">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th scope="col">SR NO.</th>
+
+                            <th scope="col">NOTE TITLE</th>
+                            <th scope="col">CATEGORY</th>
+                            <th scope="col">SELLER</th>
+                            <th scope="col">DATE ADDED</th>
+                            <th scope="col">STATUS</th>
+                            <th scope="col">ACTION</th>
+                            <th scope="col"></th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Software Engineer</td>
+                            <td>IT</td>
+                            <td>Khyati Patel<img src="images/eye.png"></td>
+                            <td>9-10-2020, 10:10</td>
+                            <td>Inreview</td>
+
+                            <td>
+                                <button class="btn btn-approove" >Approve</button>
+                                <button class="btn btn-reject"  data-toggle="modal" data-target="#exampleModal">Reject</button>
+
+                                <button class="btn btn-in-review" >InReview</button>
+
+                            </td>
+                            <td><img src="images/images/dots.png"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Computer Basic</td>
+                            <td>Computer</td>
+                            <td>Khyati Patel<img src="images/eye.png"></td>
+                            <td>10-10-2020, 11:25</td>
+                            <td>Submitted for review</td>
+
+
+                            <td>
+                                <button class="btn btn-approove" >Approve</button>
+                                <button class="btn btn-reject"  data-toggle="modal" data-target="#exampleModal">Reject</button>
+
+                                <button class="btn btn-in-review" >InReview</button>
+
+                            </td>
+                            <td><img src="images/images/dots.png"></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Human Body</td>
+                            <td>Science</td>
+                            <td>Khyati Patel<img src="images/images/eye.png"></td>
+                            <td>11-10-2020, 01:00</td>
+                            <td>Inreview</td>
+
+                            <td>
+                                <button class="btn btn-approove" >Approve</button>
+                                <button class="btn btn-reject"  data-toggle="modal" data-target="#exampleModal">Reject</button>
+
+                                <button class="btn btn-in-review" >InReview</button>
+
+                            </td>
+                            <td><img src="images/images/dots.png"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>world war 2</td>
+                            <td>History</td>
+                            <td>Khyati Patel<img src="images/images/eye.png"></td>
+                            <td>12-10-2020, 10:10</td>
+                            <td>Inreview</td>
+
+                            <td>
+                                <button class="btn btn-approove">Approve</button>
+                                <button class="btn btn-reject" data-toggle="modal" data-target="#exampleModal">Reject</button>
+
+                                <button class="btn btn-in-review">InReview</button>
+
+                            </td>
+                            <td><img src="images/images/dots.png"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+
+                            <td>Accounting</td>
+                            <td>Account</td>
+                            <td>Khyati Patel<img src="images/eye.png"></td>
+                            <td>13-10-2020, 11:25</td>
+                            <td>Inreview</td>
+
+                            <td>
+
+                                <button class="btn btn-approove">Approve</button>
+                                <button class="btn btn-reject" data-toggle="modal" data-target="#exampleModal">Reject</button>
+
+                                <button class="btn btn-in-review">InReview</button>
+
+                            </td>
+                            <td><img src="images/images/dots.png"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Human Body-Science</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="col-md-12 col-sm-12 col-12 add-margin">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1" id="comments">Remarks</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                                    placeholder="Write Remarks"></textarea>
+                                            </div>
+                                           
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-reject">Reject</button>
+                            <button type="button" class="btn btn-cancel" data-dismiss="modal">Cancel</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section id="pagination">
+                <nav aria-label="Page navigation example">
+
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#"><img src="images/images/left-arrow.png"
+                                    class="arrow-left"></a></li>
+                        <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><img src="images/images/right-arrow.png"
+                                    class="arrow-right"></a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </div>
+
+
+
+    </div>
+
+    <hr>
+
+    <footer>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-12 text-center">
+                version 1.1.24
+            </div>
+            <div class="col-md-6 col-sm-12 col-12 text-right">
+                <p>
+                    Copyright &copy; Tatvasoft All rights Reserved.
+                </p>
+            </div>
+        </div>
+
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

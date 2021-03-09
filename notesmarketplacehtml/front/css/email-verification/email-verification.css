@@ -1,0 +1,75 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #000000;
+}
+
+#home-verification{
+    padding-top: 100px;
+}
+
+#email-verification-container{
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    padding-right: 30px;
+    width: 615px;
+        
+}
+
+#heading{
+    margin-top:50px;
+}
+
+#heading h2{
+    font-family: "Open Sans",sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #6255a5;
+}
+
+#name{
+    margin-top: 30px;
+}
+
+#name h5{
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #333333;
+}
+
+#desc{
+    margin-top: 20px;
+}
+
+#desc p{
+    font-family: "Open Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+}
+
+#verify-btn{
+    margin-top: 50px;
+}
+
+.btn-verification{
+    background-color: #6255a5;
+    color:#ffffff;
+    width: 540px;
+    height: 50px;
+    border-radius: 3px;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+
+}

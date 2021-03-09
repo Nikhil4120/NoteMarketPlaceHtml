@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/signup/signup.css">
+    <link rel="stylesheet" href="css/signup/responsive.css">
+  
+
+</head>
+
+<body>
+    <section id="signup">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-12 text-center">
+                    <div id="logo">
+                        <img src="images/top-logo.png" alt="logo" class="img-responsive">
+                    </div>
+                </div>
+                
+                
+                <div class="col-md-12 col-sm-12 col-12">
+                    <div id="signup-form">
+                        <div id="heading" class="text-center">
+                            <h2>Create An Account</h2>
+                            <p>Enter Your Details to Signup</p>
+                            
+                        </div>
+                        <div class="success-para text-center">
+                            <p class="text-success"><i class="fa fa-check cir"></i> Your account has been successfully created</p>
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label for="firstname" id="fname">Firstname*</label>
+                                        <input type="text" class="form-control" id="firstname" placeholder="Enter your first name" value="John">
+
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label for="Lastname" id="lname">Lastname*</label>
+                                        <input type="text" class="form-control" id="Lastname" placeholder="Enter your last name">
+
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1" id="email">Email*</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
+
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label for="new-password-field" class="pwd">Password</label>
+                                        <input type="password" class="form-control" id="new-password-field" placeholder="Enter your Password ">
+                                        <span toggle="#new-password-field" class="eye field-icon toggle-password"><img
+                                            src="images/eye.png" alt="eye"></span>
+                                      </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label for="confirm-password-field" class="pwd">Confirm Password</label>
+                                        <input type="password" class="form-control" id="confirm-password-field" placeholder="Enter your confirm Password ">
+                                        <span toggle="#confirm-password-field" class="eye field-icon toggle-password"><img
+                                            src="images/eye.png" alt="eye"></span>
+                                      </div>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-12">                                
+                                    <button type="submit" class="btn  btn-block btn-general">Submit</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

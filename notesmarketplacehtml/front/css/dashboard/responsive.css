@@ -1,0 +1,136 @@
+@media(min-width:992px) and (max-width:1199px){
+    .stat-item h2{
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .navbar-nav{
+        padding-left: 0px;
+    }
+
+    
+    ul.navbar-nav > li > a
+    {
+        font-family: "Open Sans",sans-serif;
+        color: #333333;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 1px;
+
+    }
+
+    nav .container{
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .seller{
+        margin-left: 10px;
+    }
+    .btn-navbar{
+        margin-left: 15px;
+    }
+
+}
+
+@media(min-width:768px) and (max-width:991px){
+    .dashboard-square{
+        margin-top: 20px;
+    }
+    .navbar-nav{
+        padding-left: 0;
+    }
+    .seller,.btn-navbar{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media(max-width:767px){
+    .dashboard-square{
+        margin-top: 20px;
+    }
+    .heading{
+        
+        margin-bottom: 15px;
+    }
+    
+    table{
+        margin-top: 15px;
+    }
+    .stat-item h2{
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .navbar-nav{
+        padding-left: 0;
+    }
+    .seller,.btn-navbar{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .heading h2{
+        text-align: center;
+    }
+
+    footer .row > div{
+        text-align: center !important;
+    }
+}
+
+@media(max-width:575px){
+    .heading{
+        display: flex;
+        justify-content: center;
+    }
+    #dashboard .form-inline{
+        float: none;
+        justify-content: center;
+        
+    }
+    #my-earning{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .remove-col-left-padding{
+        padding-left: 15px;
+    }
+
+    .remove-col-right-padding{
+        padding-right: 15px;
+    }
+       
+    .custom-class{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        
+        
+    }
+
+    .arrow-left{
+        margin-left: 15px;       
+    }
+
+    .arrow-right{
+        margin-right: 15px;
+    }
+
+    li.page-item:nth-child(3) a,
+  li.page-item:nth-child(4) a,
+  li.page-item:nth-child(5) a,
+  li.page-item:nth-child(6) a
+  {
+      margin-left: 10px;
+  }
+    
+  .form-inline{
+      float:left;
+  }
+  #my-earning .stat-item {
+    padding-top: 0%;
+}
+  
+}

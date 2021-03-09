@@ -1,0 +1,173 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.navbar-toggler:focus,.navbar:hover{
+  outline: none;
+}
+
+.navbar-nav{
+    padding-left: 284px;
+    
+}
+ 
+
+ul.navbar-nav > li > a ,
+ul.navbar > li > button{
+    font-family: "Open Sans",sans-serif;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1px;
+    width: fit-content;
+
+}
+
+li.active a{
+    color: #6255a5 !important;
+    border-bottom: 3px solid #6255a5;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+}
+.btn-navbar{
+    color: #6255a5;
+    background-color: #6255a5;
+    width:89px;
+    height: 40px;
+    border-radius: 3px;
+    color:#fff;
+    font-family: "open Sans", sans-serif;
+    font-size: 13px;
+    margin-left: 30px;      
+    
+}
+
+.spacing{
+    margin-left: 2px;
+}
+
+.navbar-toggler-icon{
+  background: none;
+  color: #6255a5;
+  font-size:35px;
+}
+.navbar-toggler{
+  position: fixed;
+  right: 0;
+  top: 10px;
+}
+#padding-navbar{
+    padding-top: 60px;
+}
+hr{
+    margin-top:60px
+}
+
+ul.social-list {
+  padding: 0;
+  margin-top: 20px;
+
+}
+ul.social-list{
+  margin-top: 0;
+}
+
+ul.social-list li {
+  display: inline-block;
+  
+}
+
+ul.social-list li a {
+  border: 1px solid #fff;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 50%;
+  transition: all 400ms linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+ul.social-list li:nth-child(1) a {
+  background: #6255a5;
+  border-color: transparent;
+   
+}
+
+ul.social-list li:nth-child(2) a {
+  background: #6255a5;
+  border-color: transparent;
+  
+}
+
+ul.social-list li:nth-child(3) a {
+  background: #6255a5;
+  border-color: transparent;
+  
+}
+
+#bg-image{
+    
+    /* background: url('../../images/header-overlay.jpg') no-repeat fixed center;
+     background-size: cover;*/
+     background-image: url('../../images/header-overlay.jpg');
+     height: 190px;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ #title{
+     font-family: "open Sans", sans-serif;
+     font-size: 34px;
+     font-weight: 600;
+     line-height: 38px;
+     color: #fff;
+     margin-top: 70px;
+ }
+
+ #general-question,#upload-question,#download-question{
+     margin-top: 60px;
+ }
+
+ .heading h2{
+    font-family: "open sans",sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #6255a5;
+    margin-bottom: 30px;
+  }
+  .question{
+      margin-top: 15px;
+  }
+
+  .card-header h2{
+    font-family: "open sans",sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #333333;
+    
+  }
+
+  .card-body{
+    font-family: "open sans",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #333333;
+    padding: 0 20px;
+    padding-bottom: 15px;
+    
+  }

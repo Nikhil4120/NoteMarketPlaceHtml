@@ -1,0 +1,103 @@
+@media(max-width:1199px) and (min-width:992px){
+    .value , .name{
+        font-size: 16px;
+    }
+    .navbar-nav{
+        padding-left: 30px;
+        align-items: center;
+    }
+}
+
+
+@media(max-width:991px) and (min-width:768px){
+    
+    .navbar-nav{
+        padding-left: 0;
+    }
+    .btn-navbar{
+        margin-left: 0;
+    }
+    .seller{
+        margin-left: 0;
+    }
+    .heading h2{
+        text-align: center;
+    }
+    #member-image{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid lightgray;
+    }
+    .value{
+        font-size: 16px;
+        line-height: 20px;
+        
+    }
+    .name{
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+
+@media(max-width:767px){
+    .navbar-nav{
+        padding-left: 0;
+    }
+    .btn-navbar{
+        margin-left: 0;
+    }
+    .seller{
+        margin-left: 0;
+    }
+    .heading h2{
+        text-align: center;
+    }
+    #member-image{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid lightgray;
+    }
+    footer .row > div{
+        text-align: center !important;
+    }
+    .arrow-left{
+        margin-right: 15px;
+    }
+    .arrow-right{
+        margin-left: 15px;
+    }
+    .pagination li:nth-child(3) a,
+  .pagination li:nth-child(4) a,
+  .pagination li:nth-child(5) a,
+  .pagination li:nth-child(6) a
+  {
+      margin-left: 15px;
+  }
+}
+
+
+@media(max-width:575px){
+    
+    .navbar-brand{
+        width: 50%;
+    }
+    .navbar-brand img{
+        width: 100%;
+    }
+  
+    .value{
+        font-size: 16px;
+        line-height: 20px;
+        
+    }
+    .name{
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+}

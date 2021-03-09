@@ -1,0 +1,297 @@
+/*===========================================
+              Navbar
+============================================*/
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.navbar-toggler:focus,.navbar:hover{
+  outline: none;
+}
+
+.navbar-nav{
+    padding-left: 68px;
+}
+ 
+
+ul.navbar-nav > li > a ,
+ul.navbar > li > button{
+    font-family: "Open Sans",sans-serif;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1px;
+
+}
+
+.btn-navbar{
+    color: #6255a5;
+    background-color: #6255a5;
+    width:89px;
+    height: 40px;
+    border-radius: 3px;
+    color:#fff;
+    font-family: "open Sans", sans-serif;
+    font-size: 13px;
+    margin-left: 30px;      
+    
+}
+
+.spacing{
+    margin-left: 2px;
+}
+
+.seller {
+    
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+    
+
+}
+
+#padding-navbar{
+  padding-top: 60px;
+}
+.navbar-toggler-icon{
+  background: none;
+  color: #6255a5;
+  font-size:35px;
+}
+.navbar-toggler{
+  position: fixed;
+  right: 0;
+  top: 10px;
+}
+/*===========================================
+              Footer
+============================================*/
+
+hr{
+    margin-top:60px
+}
+
+ul.social-list {
+  padding: 0;
+  margin-top: 20px;
+
+}
+ul.social-list{
+  margin-top: 0;
+}
+
+ul.social-list li {
+  display: inline-block;
+  
+}
+
+ul.social-list li a {
+  border: 1px solid #fff;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 50%;
+  transition: all 400ms linear;
+
+}
+
+ul.social-list li:nth-child(1) a {
+  background: #6255a5;
+  border-color: transparent;
+  
+}
+
+ul.social-list li:nth-child(2) a {
+  background: #6255a5;
+  border-color: transparent;
+  
+}
+
+ul.social-list li:nth-child(3) a {
+  background: #6255a5;
+  border-color: transparent;
+  
+}
+hr{
+    margin-top: 60px;
+}
+
+
+/*===========================================
+              My Downloads
+============================================*/
+#my-downloads{
+  margin-top: 60px;
+}
+
+.heading h2{
+  font-family: "open sans",sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #6255a5;
+}
+
+.form-inline{
+  float:right;
+  
+}
+
+.btn-search{
+  
+  background-color: #6255a5;
+  width:117px;
+  height: 50px;
+  border-radius: 3px;
+  color:#fff;
+  font-family: "open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+        
+  
+}
+
+#search{
+  width: 322px;
+  height: 50px;
+  border: 1px solid #d1d1d1;
+  padding-left: 35px;
+  
+}
+
+.download-table{
+  margin-top:20px;
+}
+
+.page-link{
+  border: none;
+  
+}
+
+.pagination a.active {
+  background-color: #6255a5;
+  color: white;
+  border: 1px solid #4CAF50;
+  width: 34px;
+  height: 34px;
+  color: #fff;
+  font-family: "open sans",sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 50%;
+
+}
+
+.pagination a{
+  color: #333333;
+  font-family: "open sans",sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  
+}
+
+ul.pagination li:nth-child(3) a,
+ul.pagination li:nth-child(4) a,
+ul.pagination li:nth-child(5) a,
+ul.pagination li:nth-child(6) a
+{
+    margin-left: 20px;
+}
+#pagination{
+  margin-top: 50px;
+}
+.pagination{
+  justify-content: center;
+}
+
+.arrow-left
+{
+    width: 8px;
+    height: 15px;
+    color: #333333;
+    font-size: 16px; 
+    margin-right: 30px;   
+}
+.arrow-right{
+    width: 8px;
+    height: 15px;
+    color: #333333;
+    font-size: 16px;
+    margin-left: 30px;
+} 
+
+table{
+  border: 1px solid #d1d1d1;
+}
+
+tr{
+  height:60px;
+}
+
+thead tr th{
+  color: #333333;
+  font-family: "open sans",sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px; 
+  
+}
+
+tbody tr td:nth-child(2){
+  color: #6255a5;
+}
+
+
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left:-120px;
+  top:-10px;
+  width: 230px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.dropbtn{
+  border: none;
+  background: #fff;
+}
+
+.search-icon{
+  float: left;
+  position: relative;
+  z-index: 2;
+  top:17px;
+  left:30px
+}

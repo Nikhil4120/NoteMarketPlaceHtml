@@ -1,0 +1,161 @@
+@media (min-width:992px) and (max-width:1199px) {
+
+        #basic-details-form .row .col-md-6:nth-child(even),
+    #address-details-form .row .col-md-6:nth-child(even),
+    #university-details-form .row .col-md-6:nth-child(even)
+    {
+        padding-left: 15px;
+    }
+        
+    #countrycode{
+        width: 100%;
+        
+    }
+    #phoneno{
+        width: 100%;
+        
+    }
+
+    #phone-no{
+        margin-left: -23px;
+    }
+    input[type="text"],
+    input[type="email"],select#gender{
+        width: 100%;
+    }
+    .navbar-nav{
+        padding-left: 20px;
+    }
+
+    ul.navbar-nav > li > a
+    {
+        font-family: "Open Sans",sans-serif;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 1px;
+
+    }
+
+    nav .container{
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .seller{
+        margin-left: 10px;
+    }
+    .btn-navbar{
+        margin-left: 15px;
+    }
+    .add-border{
+        width: 100%;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+        .navbar-nav{
+            padding-left: 0px;
+            
+            
+        }
+        .btn-navbar{
+            margin-left: 0;
+            margin-top: 15px;
+        }
+        #basic-details-form .row .col-md-6:nth-child(even),
+    #address-details-form .row .col-md-6:nth-child(even),
+    #university-details-form .row .col-md-6:nth-child(even)
+    {
+        padding-left: 15px;
+    }
+    #countrycode{
+        width: 100%;
+        
+    }
+    #phoneno{
+        width: 100%;
+        
+    }
+    .seller{
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    #phone-no{
+        margin-left: -23px;
+    }
+    input[type="text"],
+    input[type="email"],select#gender{
+        width: 100%;
+    }
+    nav .container{
+        padding-right: 0;
+        margin-right: 0;
+        margin-left: 35px;
+        padding-left: 0;
+    }
+	footer .row > div{
+        text-align: center !important;
+    }
+    .add-border{
+        width: 100%;
+    }
+}
+
+
+@media (max-width:767px){
+        .navbar-nav{
+            padding-left: 0px;
+            
+            
+        }
+        .btn-navbar{
+            margin-left: 0;
+            margin-top: 15px;
+        }
+        #basic-details-form .row .col-md-6:nth-child(even),
+    #address-details-form .row .col-md-6:nth-child(even),
+    #university-details-form .row .col-md-6:nth-child(even)
+    {
+        padding-left: 15px;
+    }
+    #countrycode{
+        width: 100%;
+        
+    }
+    #phoneno{
+        width: 100%;
+        
+    }
+
+    #phone-no{
+        margin-left: -23px;
+    }
+    input[type="text"],
+    input[type="email"],select#gender{
+        width: 100%;
+    }
+    nav .container{
+        margin-right: 0;
+    }
+    footer .row > div{
+        text-align: center !important;
+    }
+    .add-border{
+        width: 100%;
+    }
+    .seller{
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:575px){
+    .navbar-brand{
+        width: 50%;
+    }
+    .navbar-brand img{
+        width: 100%;
+    }
+}

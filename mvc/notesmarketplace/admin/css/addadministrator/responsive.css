@@ -1,0 +1,65 @@
+@media(min-width:992px) and (max-width:1199px){
+    .navbar-nav{
+        padding-left: 30px;
+        align-items: center;
+    }
+
+    
+    
+}
+
+@media(max-width:991px) and (min-width:768px){
+    .navbar-nav{
+        padding-left: 0;
+    }
+    .btn-navbar{
+        margin-left: 0;
+    }
+    .seller{
+        margin-left: 0;
+    }
+
+    
+}
+
+
+@media(max-width:767px){
+    .navbar-nav{
+        padding-left: 0;
+    }
+    .btn-navbar{
+        margin-left: 0;
+    }
+    .seller{
+        margin-left: 0;
+    }
+    .heading h2{
+        text-align: center;
+    }
+
+    
+  footer .row > div{
+      text-align: center !important;
+  }
+
+   input[type="text"],input[type="email"]{
+       width: 100%;
+   } 
+  
+}
+
+@media(max-width:575px){
+    
+    
+    
+    
+
+    .navbar-brand{
+        width: 50%;
+    }
+    .navbar-brand img{
+        width: 100%;
+    }
+    
+    
+}
