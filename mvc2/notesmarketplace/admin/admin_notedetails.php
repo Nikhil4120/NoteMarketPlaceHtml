@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/admin_notedetails/admin_notedetails.css">
+    <link rel="stylesheet" href="css/admin_notedetails/responsive.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/navbarbanner.png" alt="logo" class="img-responsive">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">&#9776;</span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown-1" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Dashboard
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown-1">
+                                <a class="dropdown-item" href="notesunderreview.html">Notes Under Review</a>
+                                <a class="dropdown-item" href="publishednotes.html">Published Notes</a>
+                                <a class="dropdown-item" href="downloadednotes.html">Downloaded Notes</a>
+                                <a class="dropdown-item" href="rejectednotes.html">Rejected Notes</a>
+
+                            </div>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_notedetails.html">Notes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="members.html">Members</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown-2" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Reports
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown-2">
+                                <a class="dropdown-item" href="spamreport.html">Spam Reports</a>
+
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Setting</a>
+
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="images/Dashboard/user-img.png" alt="client" class="rounded-circle seller">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Update Profile</a>
+
+                                <a class="dropdown-item" href="#">Change Password</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" style="color: #6255a5;">Logout</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <form class="form-inline">
+
+                                <button class="btn btn-outline-success btn-navbar" type="submit">Logout</button>
+                            </form>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+    <div class="flex-shrink-0" id="padding-navbar">
+        <div class="container">
+            <section id="notes-details">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-12">
+                        <div class="heading">
+                            <h2>Notes Details</h2>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-4 col-sm-5 col-12">
+                                <div id="notes-img">
+                                    <img src="images/notedetails/1.jpg" alt="note-img" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-8 col-sm-7 col-12">
+                                <div id="note-name">
+                                    <h2>Computer Science</h2>
+                                    <p>Sciences</p>
+                                </div>
+                                <div id="note-description">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sapiente ipsa
+                                        esse aspernatur architecto sint, voluptate.</p>
+                                </div>
+                                <div id="note-btn">
+                                    <button type="button" class="btn btn-dwld" data-toggle="modal"
+                                        data-target="#myModal">DOWNLOAD / $15</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div id="note-info">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-6"><span class="name">Institution:</span></div>
+                                <div class="col-md-6 col-sm-6 col-6 text-right"><span class="value">University Of
+                                        California</span></div>
+                                <div class="col-md-6 col-sm-6 col-6"><span class="name">Country:</span></div>
+                                <div class="col-md-6 col-sm-6 col-6 text-right"><span class="value">University
+                                        State</span></div>
+                                <div class="col-md-6 col-sm-6 col-6"><span class="name">Course Name:</span></div>
+                                <div class="col-md-6 col-sm-6 col-6 text-right"><span class="value">Computer
+                                        Engineering</span></div>
+                                <div class="col-md-6 col-sm-6 col-6"><span class="name">Course Code</span></div>
+                                <div class="col-md-6 col-sm-6 col-6 text-right"><span class="value">248705</span></div>
+                                <div class="col-md-6 col-sm-6 col-6"><span class="name">Proffessor</span></div>
+                                <div class="col-md-6 col-sm-6 col-6 text-right"><span class="value">Mr. Richard
+                                        Brown</span></div>
+                                <div class="col-md-6 col-sm-6 col-6"><span class="name">Number Of Pages</span></div>
+                                <div class="col-md-6 col-sm-6 col-6 text-right"><span class="value">277</span></div>
+                                <div class="col-md-6 col-sm-6 col-6"><span class="name">Approoved date</span></div>
+                                <div class="col-md-6 col-sm-6 col-6 text-right"><span class="value">November 25
+                                        2020</span></div>
+                                <div class="col-md-6 col-sm-6 col-6"><span class="name">Rating</span></div>
+                                <div class="col-md-6 col-sm-6 col-6 text-right"><span class="value">
+                                        <img src="images/images/star.png">
+                                        <img src="images/images/star.png">
+                                        <img src="images/images/star.png">
+                                        <img src="images/images/star.png">
+                                        <img src="images/images/star-white.png">
+                                        100 Reviews
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section id="notes-preview-review">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div id="notes-preview">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-12">
+                                    <div class="heading">
+                                        <h2>Notes Preview</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-12">
+
+                                    <div id="Iframe-Cicis-Menu-To-Go"
+                                        class="set-margin-cicis-menu-to-go set-padding-cicis-menu-to-go set-border-cicis-menu-to-go set-box-shadow-cicis-menu-to-go center-block-horiz">
+                                        <div class="responsive-wrapper 
+     responsive-wrapper-padding-bottom-90pct" style="-webkit-overflow-scrolling: touch; overflow: auto;">
+                                            <iframe src="images/images/sample.pdf">
+                                                <p style="font-size: 110%;"><em><strong>ERROR: </strong>
+                                                        An &#105;frame should be displayed here but your browser version
+                                                        does not support &#105;frames.</em> Please update your browser
+                                                    to its most recent version and try again, or access the file <a
+                                                        href="images/images/sample.pdf">with
+                                                        this link.</a></p>
+                                            </iframe>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div id="customer-review">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-12">
+                                    <div class="heading">
+                                        <h2>Customer Reviews</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-12">
+                                    <div class="reviews">
+                                        <div class="row">
+                                            <div class="col-md-2 col-sm-2 col-3">
+                                                <div class="client-img">
+                                                    <img src="images/images/reviewer-1.png" class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 col-sm-10 col-9">
+                                                <div class="client-desc">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="client-name">
+                                                                <span style="float: right;"><img src="images/images/delete.png"></span>
+                                                                <h3>Richard Brown</h3>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="rating">
+                                                                <img src="images/images/star.png">
+                                                                <img src="images/images/star.png">
+                                                                <img src="images/images/star.png">
+                                                                <img src="images/images/star.png">
+                                                                <img src="images/images/star-white.png">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="client-para">
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                    elit. Vel iste accusamus officiis dignissimos</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr id="client-hr">
+
+                                            <div class="col-md-2 col-sm-2 col-3">
+                                                <div class="client-img">
+                                                    <img src="images/images/reviewer-2.png" class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 col-sm-10 col-9">
+                                                <div class="client-desc">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="client-name">
+                                                                <span style="float: right;"><img src="images/images/delete.png"></span>
+                                                                <h3>Richard Brown</h3>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="rating">
+                                                                <img src="images/images/star.png">
+                                                                <img src="images/images/star.png">
+                                                                <img src="images/images/star.png">
+                                                                <img src="images/images/star.png">
+                                                                <img src="images/images/star-white.png">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="client-para">
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                    elit. Vel iste accusamus officiis dignissimos</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr id="client-hr">
+                                            <div class="col-md-2 col-sm-2 col-3">
+                                                <div class="client-img">
+                                                    <img src="images/images/reviewer-3.png" class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 col-sm-10 col-9">
+                                                <div class="client-desc">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="client-name">
+                                                                <span style="float: right;"><img src="images/images/delete.png"></span>
+                                                                <h3>Richard Brown</h3>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="rating">
+                                                                <img src="images/images/star.png">
+                                                                <img src="images/images/star.png">
+                                                                <img src="images/images/star.png">
+                                                                <img src="images/images/star.png">
+                                                                <img src="images/images/star-white.png">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="client-para">
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <hr>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-12">
+                            <div id="success-logo">
+                                <img src="images/notedetails/SUCCESS.png">
+                                <h4 class="modal-title">Thank you For Purchasing! </h4>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-12">
+                                <div id="client-name">
+                                    <h4>Dear Smith</h4>
+                                    <p>AS this is Paid Notes - you need to pay to seller Rahil Shah offline.We Will send
+                                        him an email that you want to download this note.He may contact you further for
+                                        payment process completion.</p>
+                                    <p>Incase, you have urgency,</p>
+                                    <p>Please contact us on +9195377345959</p>
+                                    <p>Once you have received payment and ackknowledge us - selected notes you can see
+                                        over my downloads tab for download. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <p>Have a good day</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="container">
+        <footer>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-12">
+                    <p>
+                        Copyright &copy; Tatvasoft All rights Reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-12 col-12 text-right">
+                    <ul class="social-list">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

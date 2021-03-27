@@ -1,0 +1,192 @@
+@media (min-width:992px) and (max-width:1199px){
+
+    .navbar-nav{
+        padding-left: 0px;
+    }
+
+    
+    ul.navbar-nav > li > a
+    {
+        font-family: "Open Sans",sans-serif;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 1px;
+
+    }
+
+    nav .container{
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .seller{
+        margin-left: 10px;
+    }
+    .btn-navbar{
+        margin-left: 15px;
+    }
+
+    #note-name h2{
+        font-size: 30px;
+        margin-bottom: 0px;
+
+    }
+    #note-name p{
+        margin-top: 0px;
+    }
+    #note-description p{
+        margin-top: 15px;
+    }
+    .btn-dwld{
+        margin-top: 15px;
+    }
+
+    #note-name{
+        margin-top: 15px;
+    }
+    .responsive-wrapper-padding-bottom-90pct{
+        height: 540px;
+    }    
+    
+    
+}
+
+
+@media (min-width:768px) and (max-width:991px){
+    .navbar-nav{
+        
+        
+        padding-left: 0px;    
+    }
+    .btn-navbar{
+        
+        margin-top: 15px;
+        margin-left: 0;
+
+    }
+
+    #note-name h2{
+        margin-bottom: 0;
+    }
+
+    #note-name p{
+        margin-top:0 ;
+    }
+    .heading h2{
+        text-align: center;
+    }
+    #notes-preview{
+        border-bottom: 1px solid lightgray;
+    }
+    #customer-review{
+        margin-top: 30px;
+    }
+    #note-info{
+        border-top:1px solid lightgray;
+        padding-top: 10px;
+    }
+    #notes-details{
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width:767px){
+    
+       
+    .navbar-nav{
+        
+        
+        padding-left: 0px;    
+    }
+    .btn-navbar{
+        
+        margin-top: 15px;
+        margin-left: 0;
+
+    }
+
+    .heading h2{
+        text-align: center;
+    }
+    .books{
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    footer .row > div{
+        text-align: center !important;
+    }
+
+    .seller{
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    #note-name{
+        margin-top: 17px;
+    }
+
+    #note-name h2{
+        font-size: 30px;
+        margin-bottom: 0px;
+
+    }
+    #note-name p{
+        margin-top: 0px;
+    }
+
+    #note-description p{
+        margin-top: 10px;
+    }
+    #notes-preview{
+        border-bottom: 1px solid lightgray;
+    }
+    #customer-review{
+        margin-top: 30px;
+    }
+    #note-info{
+        border-top:1px solid lightgray;
+        padding-top: 10px;
+    }
+    #notes-details{
+        margin-top: 30px;
+    }
+}
+
+
+@media(max-width:575px){
+   
+   
+   
+    #notes-img{
+        display: flex;
+        justify-content: center;
+    }
+    #note-name h2,#note-name p{
+        text-align: center;
+    }
+    #note-description p{
+        padding: 0 10px;
+    }
+    #note-btn{
+        display: flex;
+        justify-content: center;
+    
+    }
+
+    .btn-dwld{
+        margin-top: 20px;
+    }
+
+    .navbar-brand{
+        width: 50%;
+    }
+
+    .navbar-brand img{
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,132 @@
+@media(max-width:1199px) and (min-width:992px){
+    .navbar-nav{
+        padding-left: 15px;
+    }
+    .navbar-brand{
+        width: fit-content;
+    }
+    .navbar-brand img{
+        width: 80%;
+    }
+    ul.navbar-nav > li > a
+    {
+        font-family: "Open Sans",sans-serif;
+        color: #333333;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 1px;
+
+    }
+
+    
+    .seller{
+        margin-left: 10px;
+    }
+    .btn-navbar{
+        margin-left: 15px;
+    }
+}
+
+
+@media(max-width:991px) and (min-width:768px){
+    .navbar-nav{
+        padding-left: 0;
+    }
+    .btn-navbar{
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+    .seller{
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+    #search{
+        width: 250px;
+    }
+    .btn-search{
+        width: 100px;
+    }
+    .heading{
+        
+        margin-top: 15px;
+    }
+}
+
+
+@media(max-width:767px){
+    .navbar-nav{
+        padding-left: 0;
+    }
+    .btn-navbar{
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+    .seller{
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+    #search{
+        width: 200px;
+    }
+    .btn-search{
+        width: 82px;
+    }
+    .heading{
+        
+        margin-top: 15px;
+    }
+    
+    footer .row > div{
+        text-align: center !important;
+    }
+    .arrow-left{
+        margin-right: 15px;
+    }
+    .arrow-right{
+        margin-left: 0px;
+    }
+    ul.pagination li:nth-child(3) a,
+ul.pagination li:nth-child(4) a,
+ul.pagination li:nth-child(5) a,
+ul.pagination li:nth-child(6) a
+{
+    margin-left: 15px;
+}
+.container{
+    max-width: 100%;
+}
+}
+
+@media(max-width:575px){
+    .navbar-brand{
+        width: 75%;
+    }
+    .navbar-brand img{
+        width: 100%;
+    }
+    #search{
+        width: 250px;
+    }
+
+   #my-downloads .form-inline{
+        float: none;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .heading{
+        text-align: center;
+    }
+    .search-icon{
+        top:-34px;
+  left: 10px;
+    }
+    
+    #search-btn{
+        margin-left: 15px;
+
+        margin-top: 10px;
+    }
+    
+}

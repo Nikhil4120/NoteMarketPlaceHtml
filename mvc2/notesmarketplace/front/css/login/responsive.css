@@ -1,0 +1,40 @@
+/*@media (min-width:992px) and (max-width:1199px) {
+
+	#top-logo{
+        margin-left: 2%;
+    }
+    #login-form{
+        margin-left: 20%;
+    }
+    
+	
+	
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+	#login-form{
+        margin-left: 7%;
+    }
+    #top-logo{
+        margin-left: -5%;
+    }
+	
+	
+}
+
+@media (max-width:767px){
+    #login-form{
+        margin-left: -7%;
+    }
+    #top-logo{
+        margin-left: 5%;
+    }
+}
+
+@media (max-width:480px){
+    #top-logo{
+        margin-left: 33%;
+        
+    }
+}*/

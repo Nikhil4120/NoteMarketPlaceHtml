@@ -1,0 +1,436 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:focus{
+  outline: none;
+}
+.navbar-nav{
+    padding-left: 203px;
+}
+
+li.active a{
+    color: #6255a5 !important;
+    border-bottom: 3px solid #6255a5;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 1rem;
+    margin-right: 1rem;
+} 
+
+ul.navbar-nav > li > a ,
+ul.navbar > li > button{
+    font-family: "Open Sans",sans-serif;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1px;
+
+}
+
+.btn-navbar{
+    color: #6255a5;
+    background-color: #6255a5;
+    width:89px;
+    height: 40px;
+    border-radius: 3px;
+    color:#fff;
+    font-family: "open Sans", sans-serif;
+    font-size: 13px;
+    margin-left: 30px;      
+    
+}
+
+.spacing{
+    margin-left: 2px;
+}
+
+.seller {
+    
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    
+
+}
+
+#padding-navbar{
+  padding-top: 60px;
+}
+.navbar-toggler-icon{
+    background: none;
+    color: #6255a5;
+    font-size:35px;
+    
+}
+.navbar-toggler{
+    position: fixed;
+    right: 0;
+    top: 10px;
+}
+
+/*===========================================
+              Footer
+============================================*/
+
+hr{
+    margin-top:60px
+}
+ul.social-list{
+    margin-top: 0;
+  }
+  
+  ul.social-list li {
+    display: inline-block;
+    
+  }
+  
+  ul.social-list li a {
+    border: 1px solid #fff;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    transition: all 400ms linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ul.social-list li:nth-child(1) a {
+    background: #6255a5;
+    border-color: transparent;
+      
+  }
+  
+  ul.social-list li:nth-child(2) a {
+    background: #6255a5;
+    border-color: transparent;
+    
+  }
+  
+  ul.social-list li:nth-child(3) a {
+    background: #6255a5;
+    border-color: transparent;
+    
+  }
+  hr{
+      margin-top: 60px;
+  }
+  /*===========================================
+                Notes-details
+  ============================================*/
+  #padding-navbar{
+      padding-top: 60px;
+  }
+  #notes-details,
+  #notes-preview-review{
+      margin-top: 60px;
+  }
+  
+  .heading h2{
+          font-family: "open sans",sans-serif;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 28px;
+          color: #6255a5;
+  }
+  #note-name h2{ 
+      font-family: "open sans",sans-serif;
+          font-size: 34px;
+          font-weight: 600;
+          line-height: 34px;
+          color: #6255a5;
+  }   
+  #note-name p{
+      font-family: "open sans",sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 26px;
+          color: #333333;
+          margin-top: 20px;
+          margin-bottom: 0px;
+  }
+  #notes-img{
+      margin-top: 20px;
+  }
+  
+  #notes-img img{
+      height: 300px;
+      width: 200px;
+      
+  }
+  
+  #note-name{
+      margin-top: 25px;
+  }
+  
+  #note-description p{
+      margin-top: 30px;
+      font-family: "open sans",sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 26px;
+          color: #333333;
+          margin-bottom: 0;
+      
+  }
+  
+  .btn-dwld{
+      background-color: #6255a5;
+      width: 204px;
+      height: 50px;
+      border-radius: 3px;
+      font-family: "Open sans",sans-serif;
+      font-size: 18px;
+      line-height: 22px;
+      margin-top: 30px;   
+      color: #fff;
+  
+  }
+  
+  #note-info{
+      margin-top: 30px;
+  }
+  
+  .name{
+      font-family: "open sans",sans-serif;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 36px;
+          color: #333333;
+  }
+  
+  .value{
+          font-family: "open sans",sans-serif;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 36px;
+          color: #6255a5;
+  }
+  
+  .reviews{
+      
+      width: 100%;
+      max-height: 811px;
+      border-radius: 3px;
+      border: 1px solid #d1d1d1;
+      padding-right: 30px;
+      padding-left: 30px;
+      margin-top: 20px;
+      padding-bottom: 27px;
+  }
+  .client-img{
+      padding-top: 20px;
+      
+  }
+  .client-img img{
+      width: 50px;
+      height: 50px;
+  
+  }
+  
+  .client-desc{
+      padding-top: 20px;
+      
+  }/*
+  .rate {
+      float: left;
+      height: 46px;
+      padding: 0 0px;
+      margin-top: -15px;
+  }
+  .rate:not(:checked) > input {
+      position:absolute;
+      top:-9999px;
+  }
+  .rate:not(:checked) > label {
+      float:right;
+      width:1em;
+      overflow:hidden;
+      white-space:nowrap;
+      cursor:pointer;
+      font-size:20px;
+      color:#ccc;
+  }
+  .rate:not(:checked) > label:before {
+      content: '★ ';
+  }
+  .rate > input:checked ~ label {
+      color: #ffc700;    
+  }
+  .rate:not(:checked) > label:hover,
+  .rate:not(:checked) > label:hover ~ label {
+      color: #deb217;  
+  }
+  .rate > input:checked + label:hover,
+  .rate > input:checked + label:hover ~ label,
+  .rate > input:checked ~ label:hover,
+  .rate > input:checked ~ label:hover ~ label,
+  .rate > label:hover ~ input:checked ~ label {
+      color: #c59b08;
+  }
+  */
+  .rating{
+      margin-top: -5px;
+      padding: 0;
+  }
+  
+  .client-para p{
+          font-family: "open sans",sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          color: #333333;
+          margin-bottom: 0;
+          margin-top: 15px;
+  }
+  
+  .client-name h3{
+      font-family: "open sans",sans-serif;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+          color: #333333;
+  }
+  
+  #client-hr{
+      width: 100%;
+      margin-top: 20px;
+  }
+  
+  
+  /*===========================================
+                Note details
+  ============================================*/
+  .center-block-horiz {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+   .set-margin-cicis-menu-to-go {
+     margin: 20px;
+   }
+   .set-padding-cicis-menu-to-go {
+     padding: 0px;
+   }
+   .set-border-cicis-menu-to-go {
+      border: 5px inset #4f4f4f;
+   }
+   set-box-shadow-cicis-menu-to-go {
+     -webkit-box-shadow: 4px 4px 14px #4f4f4f;
+        -moz-box-shadow: 4px 4px 14px #4f4f4f;
+             box-shadow: 4px 4px 14px #4f4f4f;
+   }
+     
+   /*
+   ** Style the iframe
+   ** =========================
+   */
+   /*
+       css commmon to all iframes
+   */
+   .responsive-wrapper {
+     position: relative;
+     height: 0;    /* gets height from padding-bottom */
+     overflow: hidden;
+     /* put following styles (necessary for overflow and 
+        scrolling handling) inline in .embed-responsive-element-wrapper around iframe because not stable in CSS
+       -webkit-overflow-scrolling: touch; 
+                         overflow: auto; */
+   }
+   .responsive-wrapper img,
+   .responsive-wrapper object,
+   .responsive-wrapper iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+      
+     border-style: none;
+     padding: 0;
+     margin: 0;
+   }
+   
+   /*
+       css particular to this iframe
+   */
+   
+   #Iframe-Cicis-Menu-To-Go {
+     max-width: 666.67px;
+     max-height: 600px;
+     overflow: hidden;
+   }
+   /*
+      padding-bottom = h/w as %
+   */
+   .responsive-wrapper-padding-bottom-90pct {
+     padding-bottom: 90%;
+   }
+  
+   #success-logo{
+       margin-top: 50px;
+       margin-left: 100px;
+   }
+  
+   #success-logo img{
+       margin-left: 100px;
+   }
+  
+   #success-logo h4{
+      font-family: "open sans",sans-serif;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 30px;
+      color: #6255a5;
+      margin-top: 5px;
+     
+   }
+  
+   #client-name h4{
+      font-family: "open sans",sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+      color: #333333;
+      margin-bottom: 5px;
+   }
+  
+   #client-name p{
+      font-family: "open sans",sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #333333;
+      margin-bottom: 30px;
+   }
+   
+   .modal-footer{
+       justify-content: left;
+   }
+   .modal-footer p{
+      font-family: "open sans",sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #333333;
+      margin-bottom: 30px;
+      
+   }
+
+   span.value > img,
+   .rating > img{
+    
+    width: 20px;
+}
+  

@@ -1,0 +1,86 @@
+@media(max-width:575px){
+    .navbar-brand{
+        width: 75%;
+    }
+    .navbar-brand img{
+        width: 100%;
+    }
+}
+
+
+@media (max-width:767px){
+    
+       
+    .navbar-nav{
+        
+        
+        padding-left: 0px;
+      
+    
+    
+    
+        
+    }
+
+    
+
+    .btn-navbar{
+        
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+    .heading h2{
+        text-align: center;
+    }
+    .books{
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    footer .row > div{
+        text-align: center !important;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    
+    
+    .navbar-nav{
+        
+        
+        padding-left: 0px;
+      
+    
+    
+    
+        
+    }
+
+    
+
+    .btn-navbar{
+        
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+    .heading h2{
+        text-align: center;
+    }
+    .books{
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px){
+    .navbar-nav{
+        padding-left: 90px;
+    }
+
+    .card{
+        width: 300px;
+    }
+}
