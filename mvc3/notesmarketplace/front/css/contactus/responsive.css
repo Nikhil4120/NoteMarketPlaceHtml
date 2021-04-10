@@ -1,0 +1,59 @@
+@media(min-width:992px) and (max-width:1199px){
+    .navbar-nav{
+        padding-left: 92px;
+    }
+    
+}
+
+@media(min-width:768px) and (max-width:991px){
+    .navbar-nav{
+        padding-left: 0;
+        text-align: left;
+    }
+    .btn-navbar{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+}
+
+
+@media(max-width:767px){
+    .navbar-nav{
+        padding-left: 0;
+        text-align: left;
+    }
+    .btn-navbar{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    #heading h2,#heading p{
+        text-align: center;
+    }
+
+    #heading p{
+        margin-bottom: 0px;
+    }
+
+    #contact-form{
+        margin-top: 30px;
+    }
+    #contact-us{
+        margin-top: 30px;
+    }
+    #btn-contactus{
+        display: flex;
+        justify-content: center;
+    }
+    footer .row > div{
+        text-align: center !important;
+    }
+}
+
+@media(max-width:575px){
+   .navbar-brand{
+       width: 50%;
+   }
+   .navbar-brand img{
+       width: 100%;
+   }
+}

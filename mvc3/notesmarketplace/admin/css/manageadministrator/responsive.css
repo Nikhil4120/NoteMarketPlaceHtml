@@ -1,0 +1,103 @@
+@media(min-width:992px) and (max-width:1199px){
+    .navbar-nav{
+        padding-left: 30px;
+        align-items: center;
+    }
+
+    
+    
+}
+
+@media(max-width:991px) and (min-width:768px){
+
+    .navbar-nav{
+        padding-left: 0;
+    }
+    .btn-navbar{
+        margin-left: 0;
+    }
+    .seller{
+        margin-left: 0;
+    }
+
+    #search{
+        width: 250px;
+    }
+
+    .search-icon{
+        right: 250px;
+    }
+
+    .btn-search{
+        width: 95px;
+    }
+}
+
+
+@media(max-width:767px){
+    .navbar-nav{
+        padding-left: 0;
+    }
+    .btn-navbar{
+        margin-left: 0;
+    }
+    .seller{
+        margin-left: 0;
+    }
+    .heading h2{
+        text-align: center;
+    }
+
+    .table-heading{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .arrow-left{
+        margin-right: 15px;
+    }
+    .arrow-right{
+        margin-left: 15px;
+    }
+    ul.pagination li:nth-child(3) a,
+  ul.pagination li:nth-child(4) a,
+  ul.pagination li:nth-child(5) a,
+  ul.pagination li:nth-child(6) a{
+      margin-left: 15px;
+  }
+  footer .row > div{
+      text-align: center !important;
+  }
+
+  .manage-category{
+      margin-top: 30px;
+  }
+}
+
+@media(max-width:575px){
+    
+    
+    .admin-dashboard-table .form-inline{
+        float: none;
+        display: flex;
+        justify-content: center;
+    }
+    #search{
+        width: 250px;
+    }
+
+    .search-icon{
+        right: 245px;
+    }
+
+    .navbar-brand{
+        width: 50%;
+    }
+    .navbar-brand img{
+        width: 100%;
+    }
+    .btn-search{
+        margin-top: 10px;
+    }
+    
+}
