@@ -55,7 +55,7 @@
         if(!($delete_row_query)){
             die("QUERY FAILED".mysqli_error($connection));
         }
-        header("Location: /notesmarketplace/front/dashboard.php");
+        header("Location: dashboard.php");
     }
 ?>
 <body>
@@ -263,7 +263,7 @@
                                        class='delete'></td>";
                                     }
                                     else{
-                                        echo "<td><a href='note-details.php?note=$title'><img src='images/eye.png'></a></td>";
+                                        echo "<td><a href='note-details.php?note=$ID'><img src='images/eye.png'></a></td>";
                                     }
                                 ?>
                                 
@@ -309,7 +309,7 @@
                 
                 
                 <?php
-                    $query = "SELECT * FROM sellernotes LEFT JOIN notecategories ON sellernotes.category = notecategories.ID ";
+                    $query = "SELECT *,sellernotes.CreatedDate AS CreatedDate FROM sellernotes LEFT JOIN notecategories ON sellernotes.category = notecategories.ID ";
                     $query .= " WHERE sellerid = $id AND sellernotes.status= 9"; 
                     
                     $select_publish_query = mysqli_query($connection,$query);

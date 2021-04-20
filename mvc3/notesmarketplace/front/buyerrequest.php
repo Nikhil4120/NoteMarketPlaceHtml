@@ -225,7 +225,7 @@
                                     <td><?php echo $IsPaid ?></td>
                                     <td><?php echo $sellingprice ?></td>
                                     <td><?php echo $time ?></td>
-                                    <td><a href="note-details.php?note=<?php echo $title;?>"><img src="images/eye.png"></a></td>
+                                    <td><a href="note-details.php?note=<?php echo $noteid;?>"><img src="images/eye.png"></a></td>
                                     <td>
                                         
                                         <div class="dropdown">

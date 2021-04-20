@@ -8,6 +8,7 @@
     if(isset($_SESSION['msg'])){
         $msg = $_SESSION['msg'];
         echo "<script>alert('$msg');</script>";
+        unset($_SESSION['msg']);
     }
     
 ?>
@@ -62,10 +63,12 @@
                                 }
                                 
                                 if(mysqli_num_rows($login_query) == 0 ){
+                                    $flag = 1;
+                                    $validation_msg = "Mail id does not exist"; 
                                     echo "<script>alert('Mail id does not exist . Please enter valid email id');</script>";
                                 }
                                 else{
-                                    while($row = mysqli_fetch_assoc($login_query)){
+                                        $row = mysqli_fetch_assoc($login_query);
                                         $ID = $row['ID'];
                                         $isemailverified = $row['IsEmailVerified'];                                        
                                         $db_password = $row['Password'];
@@ -73,66 +76,27 @@
                                         $lastname = $row['LastName'];
                                         $email = $row['EmailID'];
                                         $roleid = $row['RoleID'];
+
                                         
-                                    }
                                     
-                                    if($password == $db_password){
+                                    
+                                    if(password_verify($password, $db_password))
+                                    {
                                         if($roleid == 3){
                                             if($isemailverified == 0){
-                                                $token = $email;
-                                                echo "<script>alert('Please first you verified Your email')</script>";
-                                                $body = "HELLO <h1>" . $firstname . " " .  $lastname . ",<br><br></h1>";
-                                                $body .= "<p>Thank you for signing up with us. Please click on below link to verify your email address and to do login</p><br>";
-                    
-                                                $body .= "<table style='height:60%;width: 60%; position: absolute;margin-left:10%;font-family:Open Sans !important;background: white;border-radius: 3px;padding-left: 2%;padding-right: 2%;'>
-                                                <thead>
-                                                    <th>
-                                                        <img src='https://i.ibb.co/HVyPwqM/top-logo1.png' alt='logo' style='margin-top: 5%; margin-left: 0px;'>
-                                                    </th>
-                                                </thead>
-                                                <tbody>
-                                                    <tr style='height: 60px;font-family: Open Sans;font-size: 26px;font-weight: 600;line-height: 30px;color: #6255a5;'>
-                                                        <td class='text-1'>Email Verification</td>
-                                                    </tr>
-                                                    <tr style='height: 40px;font-family: Open Sans;font-size: 18px;font-weight: 600;line-height: 22px;color: #333333;margin-bottom: 20px;'>
-                                                        <td class='text-2'>Dear $firstname,</td>
-                                                    </tr>
-                                                    <tr style='height: 60px;'>
-                                                        <td class='text-3'>
-                                                            Thanks for Signing up! <br>
-                                                            Simply click below for email verification.
-                                                        </td>
-                                                    </tr>
-                                                    <tr style='height: 120px;font-size: 16px;font-weight: 400;line-height: 22px;color: #333333;margin-bottom: 50px;'>
-                                                        <td style='text-align: center;'>
-                                                            <button class='btn btn-verify' style='width: 100% !important;height:50px;font-family: Open Sans; font-size: 18px;font-weight: 600;line-height: 22px;color: #fff;background-color: #6255a5;border-radius: 3px;'><a class='btn' href='http://localhost/notesmarketplace/front/activation.php?token=$token' role='button' style='color: #fff; text-decoration: none; text-transform: uppercase;'>Verify email address</a>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                                </table>"; 
-                                                $body .= "<br><br>";
-                                                $body .= "Regards,<br>NotesmarketPlace";
-                                                include "mail.php";
-                                                $mail->setFrom("notesmarketplace4120@gmail.com");
                                                 
-                                                $mail->addAddress($email);
-                                                $mail->addReplyTo("notesmarketplace4120@gmail.com");
-                                                $mail->isHtml(true);
-                                                $mail->Subject = "Email Verification" ;
-                                                $mail->Body = $body;
-                                                $flag = 1;   
-                                                if(!$mail->send()){
-                                                    echo "<script>alert('something went wrong');</script>";
-                                                }
-                                                else{
+                                                    $validation_msg = "Verify your email first"; 
                                                     echo "<script>alert('Please Verify Your Email first');</script>";
-                                                }
+                                                
                                                                         
                                             }
                                             else{
                                                 $_SESSION['ID'] = $ID; 
                                                 $_SESSION['roleid'] = $roleid;
+                                                if(isset($_POST['remember'])){
+                                                    setcookie('emailcookie',$email,time()+86400);
+                                                    setcookie('passwordcookie',$password,time()+86400);
+                                                }
                                                 $query = "SELECT * FROM userprofile WHERE userid = $ID";
                                                 $select_page_query  = mysqli_query($connection,$query);
                                                 if(!($select_page_query)){
@@ -151,6 +115,10 @@
                                         else{
                                             $_SESSION['ID'] = $ID; 
                                             $_SESSION['roleid'] = $roleid;
+                                            if(isset($_POST['remember'])){
+                                                setcookie('emailcookie',$email,time()+86400);
+                                                setcookie('passwordcookie',$password,time()+86400);
+                                            }
                                             header('location: admin/admin_dashboard.php');                 
                                         }
  
@@ -159,6 +127,7 @@
 
                                     else{
                                         $flag = 1;
+                                        $validation_msg = "The Password that you have entered is incorrect"; 
                                     }
 
                             }
@@ -170,7 +139,7 @@
                                     <div class="form-group">
                                         <label for="exampleInputEmail1" id="email">Email</label>
                                         <input type="email" class="form-control" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp" placeholder="notesmarketplace@gmail.com" name="email">
+                                            aria-describedby="emailHelp" placeholder="notesmarketplace@gmail.com" name="email" value="<?php if(isset($_COOKIE['emailcookie'])){echo $_COOKIE['emailcookie'];}?>" required>
 
                                     </div>
                                 </div>
@@ -185,16 +154,16 @@
                                             </div>
                                         </div>
                                         <input type="password" class="form-control" id="password-field"
-                                            placeholder="Password" name="password">
+                                            placeholder="Password" name="password" value="<?php if(isset($_COOKIE['passwordcookie'])){echo $_COOKIE['passwordcookie'];}?>" required>
                                         <span toggle="#password-field" class="eye field-icon toggle-password"><img
                                                 src="front/images/eye.png" alt="eye"></span>
-                                        <p id="incorrect-pwd" style="display:<?php if(isset($flag)){echo 'block';}else{echo 'none';}  ?>">The Password that you have entered is incorrect</p>
+                                        <p id="incorrect-pwd" style="display:<?php if(isset($flag)){echo 'block';}else{echo 'none';}  ?>"><?php echo $validation_msg; ?></p>
                                     </div>
                                 </div>
 
                                 <div class="col-md-12 col-sm-12 col-12">
                                     <div class="form-group form-check" id="add-margin">
-                                        <input type="checkbox" class="form-check-input" id="chk">
+                                        <input type="checkbox" class="form-check-input" id="chk" name="remember">
                                         <label class="form-check-label" for="chk" id="chk-label">Remeber Me</label>
                                     </div>
                                 </div>

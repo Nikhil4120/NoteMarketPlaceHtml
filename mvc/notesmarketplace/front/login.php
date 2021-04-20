@@ -141,7 +141,7 @@
                                         else{
                                             $_SESSION['ID'] = $ID; 
                                             echo "<script>alert('WELCOME');</script>";
-                                            header('location: /notesmarketplace/front/userprofile.php');
+                                            header('location: search.php');
                                         }
 
                                     }

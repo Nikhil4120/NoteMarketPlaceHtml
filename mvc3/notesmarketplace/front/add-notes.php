@@ -369,7 +369,7 @@
                             <div class="form-group">
                                 <label for="note-pages">Pages*</label>
                                 <select class="form-control custom-select" id="note-pages" name="pages">
-                                    <option>Enter number of note pages</option>
+                                    <option value="">Enter number of note pages</option>
                                     <option value="100">100</option>
                                     <option value="200">200</option>
                                 </select>
@@ -410,10 +410,10 @@
                                             $country_id = $row['ID'];
                                             $country_name = $row['Name'];
                                             if(isset($flag) && $country == $country_id){
-                                                echo "<option value='{$country_id}'>$country_name</option>";    
+                                                echo "<option value='{$country_id}' selected>$country_name</option>";    
                                             }
                                             else{
-                                                echo "<option value='{$country_id}' selected>$country_name</option>";
+                                                echo "<option value='{$country_id}'>$country_name</option>";
                                             }
                                             
                                         
@@ -486,9 +486,9 @@
                                 <div class="col-md-12 col-sm-12 col-12">
                                     
                                     <label for="sell" id="#sell">Sell For*</label><br>
-                                    <input type="radio" id="free" name="sell" value="0" checked>
+                                    <input type="radio" id="free" name="sell" value="0" <?php if(isset($flag)){if($sell == 0){echo "checked";}}else{echo "checked";}?>>
                                     <label for="free" id="free-lbl">Free</label>
-                                    <input type="radio" id="paid" name="sell" value="1">
+                                    <input type="radio" id="paid" name="sell" value="1" <?php if(isset($flag)){if($sell == 1){echo "checked";}}?>>
                                     <label for="paid" id="paid-lbl">Paid</label>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-12">
@@ -508,7 +508,7 @@
                                     <div class="add-border">
                                     <label for="upload-file" class="upload-profile">
                                         <img src="images/images/upload-file.png">
-                                        <p style="color: lightgray;" id="cv_name">Preview CV</p>
+                                        <p style="color: lightgray;" id="cv_name"><?php if(isset($flag) && $preview_cv != ""){echo $preview_cv;}else{echo "Preview CV";}?></p>
                                         <input type="file" id="upload-file" style="display: none;" name="preview_cv">
                                     </label>
                                 </div>
@@ -518,7 +518,7 @@
                     </div>
                 </div>
                 <div class="button">
-                    <button type="submit" class="btn btn-save" name="save">SAVE</button>
+                    <button type="submit" class="btn btn-save" name="save" <?php if(isset($flag)){echo "disabled";} ?>>SAVE</button>
                     <button type="submit" class="btn btn-publish" name="publish" style="visibility:<?php if(isset($flag)){echo "visible";}else{echo "hidden";} ?>">PUBLISH</button>
                 </div>
             </form>
@@ -537,10 +537,16 @@
     <script src="js/script.js"></script>
     <script>
         $(document).ready(function(){
+            var a = $('input[type=radio]:checked').val();
+            if(a == 0){
+                    $('#sell-price').css('display','none');
+                    $('#upload-file').prop("required",false);
+                    $('#sell_price').css('display','none');
+            }
             $("input[type=radio]").change(function(){
                 var a = $(this).val();
                 if(a == 0){
-                    $('#sell-price').css('display','none');
+                    $('#sell-price').css('display','none').prop("required",false);
                     $('#upload-file').prop("required",false);
                     $('#sell_price').css('display','none');
 

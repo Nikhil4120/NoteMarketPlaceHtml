@@ -1,10 +1,10 @@
 
 <?php
     require './../phpmailer/PHPMailerAutoload.php';
-    $mail = new PHPMailer();
+    $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
-    $mail->port = 587;
+    $mail->Port = 587;
     $mail->SMTPAUTH=true;
     $mail->SMTPSecure='tls';
     $mail->SMTPAuth=true;

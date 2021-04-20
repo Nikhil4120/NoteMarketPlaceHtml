@@ -123,7 +123,7 @@
     <img src="../uploads/Members/<?php echo $sellerid;?>/<?php echo $ID;?>/<?php echo $displaypicture;?>" class="card-img-top img-thumbnail"
         alt="..." style="height:200px">
     <div class="card-body">
-        <a href="note-details.php?note=<?php echo $title; ?>">
+        <a href="note-details.php?note=<?php echo $ID; ?>">
             <h5 class="card-title">
                 <?php echo $title; ?>
             </h5>

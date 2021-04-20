@@ -119,8 +119,8 @@
                                     $countryid = $row['ID'];
                                     $countryname = $row['Name'];
                                     $countrycode = $row['CountryCode'];
-                                    $countrycode = explode('+',$countrycode);
-                                    $countrycode = $countrycode[1];
+                                    
+                                    
                                     $date = $row['CreatedDate'];
                                     $addedby = $row['CreatedBy'];
                                     $active = $row['IsActive'];
@@ -154,50 +154,7 @@
                         <?php
                                 }
                         ?>
-                        <!-- <tr>
-                            <th scope="row">2</th>
-                            <td>Australia</td>
-                            <td>24</td>
-                            <td>10-10-2020, 12:30</td>
-                           <td>Rahul Shah</td>
-                            
-                            
-                            <td>Yes</td>
-                            <td><img src="images/images/edit.png"><span style="float:right;"><img src="images/images/delete.png"></span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            
-                            <td>USA</td>
-                            <td>04</td>
-                           
-                            <td>11-10-2020, 1:00</td>
-                            <td>Suman Trivedi</td>
-                            <td>No</td>
-                            <td><img src="images/images/edit.png"><span style="float:right;"><img src="images/images/delete.png"></span></td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            
-                            <td>United Kingdom</td>
-                            <td>12</td>
-                            <td>12-10-2020, 10:10</td>
-                            <td>Raj Malhotra</td>
-                            <td>Yes</td>
-                            <td><img src="images/images/edit.png"><span style="float:right;"><img src="images/images/delete.png"></span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            
-                            <td>canada</td>
-                            <td>13</td>
-                            
-                            <td>9-10-2020, 10:10</td>
-                            <td>Niya Patel</td>
-                            <td>Yes</td>
-                            <td><img src="images/images/edit.png"><span style="float:right;"><img src="images/images/delete.png"></span></td>
-                        </tr> -->
+                        
                     </tbody>
                 </table></div>
             </div>
@@ -248,7 +205,7 @@
     </script>
     <script>
         $(function(){
-            $('.delete').click(function(){
+            $('table').on('click','.delete',function(){
                 if(confirm("Are You Confirm inactive this Country?")){
                     return true;
                 }

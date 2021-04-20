@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2021 at 02:20 PM
+-- Generation Time: Apr 20, 2021 at 11:03 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.26
 
@@ -47,7 +47,7 @@ INSERT INTO `countries` (`ID`, `Name`, `CountryCode`, `CreatedDate`, `CreatedBy`
 (1, 'India', '+91', '2021-02-23 00:00:00', 1, '2021-02-23 00:00:00', 1, b'01'),
 (2, 'Afganistan', '+33', '2021-03-30 00:00:00', 23, NULL, NULL, b'01'),
 (3, 'Australia', '+61', '2021-02-23 00:00:00', 1, '2021-02-23 00:00:00', 1, b'01'),
-(4, 'canada', '+1', '2021-02-23 00:00:00', 1, '2021-02-23 00:00:00', 1, b'01'),
+(4, 'Kenya', '+1', '2021-02-23 00:00:00', 1, '2021-02-23 00:00:00', 1, b'01'),
 (5, 'Bangladesh', '+103', '2021-03-30 10:01:54', 23, NULL, NULL, b'00');
 
 -- --------------------------------------------------------
@@ -169,7 +169,35 @@ INSERT INTO `downloads` (`ID`, `NoteID`, `Seller`, `Downloader`, `IsSellerHasAll
 (94, 12, 13, 29, b'01', 'uploads/Members/13/12/attachments/4304032021043814.pdf', b'01', '2021-04-09 16:24:08', b'00', '0', 'nikhil', '2', '2021-04-09 16:24:08', 29, NULL, NULL, b'01'),
 (95, 25, 1, 29, b'01', 'uploads/Members/1/25/attachments/4918032021020532.pdf', b'01', '2021-04-09 16:42:52', b'01', '1342', 'Web Design', '1', '2021-04-09 16:35:32', 29, NULL, NULL, b'01'),
 (96, 41, 29, 1, b'01', 'uploads/Members/29/41/attachments/7009042021042909.pdf', b'01', '2021-04-09 16:45:04', b'01', '1500', 'Drawing', '3', '2021-04-09 16:40:53', 1, NULL, NULL, b'01'),
-(97, 41, 29, 1, b'01', 'uploads/Members/29/41/attachments/7009042021042909.pdf', b'01', '2021-04-09 16:45:12', b'01', '1500', 'Drawing', '3', '2021-04-09 16:45:12', 1, NULL, NULL, b'01');
+(97, 41, 29, 1, b'01', 'uploads/Members/29/41/attachments/7009042021042909.pdf', b'01', '2021-04-09 16:45:12', b'01', '1500', 'Drawing', '3', '2021-04-09 16:45:12', 1, NULL, NULL, b'01'),
+(98, 11, 13, 13, b'01', 'uploads/Members/13/11/attachments/4204032021043616.pdf', b'01', '2021-04-12 09:31:29', b'00', '0', 'Python Programming', '2', '2021-04-12 09:31:29', 13, NULL, NULL, b'01'),
+(99, 28, 1, 13, b'01', 'uploads/Members/1/28/attachments/5220032021033626.pdf', b'01', '2021-04-12 09:33:35', b'00', '0', 'xyz', '1', '2021-04-12 09:33:35', 13, NULL, NULL, b'01'),
+(100, 46, 13, 13, b'01', 'uploads/Members/13/46/attachments/7512042021093655.pdf', b'01', '2021-04-12 09:37:32', b'01', '1222', 'happy', '3', '2021-04-12 09:37:32', 13, NULL, NULL, b'01'),
+(101, 39, 13, 1, b'01', 'uploads/Members/13/39/attachments/6826032021072434.pdf', b'00', '2021-04-12 09:45:31', b'01', '100', 'Krunal', '2', '2021-04-12 09:45:31', 1, NULL, NULL, b'01'),
+(102, 51, 1, 1, b'01', 'uploads/Members/1/51/attachments/8016042021023808.pdf', b'01', '2021-04-16 18:09:36', b'00', '0', 'Bhukhhadtal', '2', '2021-04-16 18:09:36', 1, NULL, NULL, b'00'),
+(103, 51, 1, 1, b'01', 'uploads/Members/1/51/attachments/9516042021023808.pdf', b'01', '2021-04-16 18:09:36', b'00', '0', 'Bhukhhadtal', '2', '2021-04-16 18:09:36', 1, NULL, NULL, b'00'),
+(104, 51, 1, 1, b'01', 'uploads/Members/1/51/attachments/9616042021023808.pdf', b'01', '2021-04-16 18:09:36', b'00', '0', 'Bhukhhadtal', '2', '2021-04-16 18:09:36', 1, NULL, NULL, b'00'),
+(105, 41, 29, 1, b'01', 'uploads/Members/29/41/attachments/7009042021042909.pdf', b'01', '2021-04-16 22:20:24', b'01', '1500', 'Drawing', '3', '2021-04-16 22:20:24', 1, NULL, NULL, b'01'),
+(106, 32, 1, 1, b'01', 'uploads/Members/1/32/attachments/5926032021125653.pdf', b'01', '2021-04-16 22:21:52', b'01', '1222', 'IRON Man', '2', '2021-04-16 22:21:52', 1, NULL, NULL, b'01'),
+(107, 32, 1, 1, b'01', 'uploads/Members/1/32/attachments/6026032021125653.pdf', b'01', '2021-04-16 22:21:52', b'01', '1222', 'IRON Man', '2', '2021-04-16 22:21:52', 1, NULL, NULL, b'01'),
+(108, 32, 1, 1, b'01', 'uploads/Members/1/32/attachments/6126032021125653.pdf', b'01', '2021-04-16 22:21:52', b'01', '1222', 'IRON Man', '2', '2021-04-16 22:21:52', 1, NULL, NULL, b'01'),
+(109, 45, 1, 13, b'01', 'uploads/Members/1/45/attachments/7410042021052329.pdf', b'01', '2021-04-16 22:39:02', b'01', '12345', 'cfgffghj', '4', '2021-04-16 22:35:35', 13, NULL, NULL, b'01'),
+(110, 30, 13, 1, b'01', 'uploads/Members/13/30/attachments/5525032021105725.pdf', b'01', '2021-04-16 22:41:48', b'01', '100', 'INDIA', '3', '2021-04-16 22:41:48', 1, NULL, NULL, b'01'),
+(111, 30, 13, 1, b'01', 'uploads/Members/13/30/attachments/5625032021105725.pdf', b'01', '2021-04-16 22:41:48', b'01', '100', 'INDIA', '3', '2021-04-16 22:41:48', 1, NULL, NULL, b'01'),
+(112, 30, 13, 1, b'01', 'uploads/Members/13/30/attachments/5725032021105725.pdf', b'01', '2021-04-16 22:41:48', b'01', '100', 'INDIA', '3', '2021-04-16 22:41:48', 1, NULL, NULL, b'01'),
+(113, 27, 1, 13, b'01', 'uploads/Members/1/27/attachments/5120032021033352.pdf', b'01', '2021-04-16 22:43:26', b'01', '1233', 'JSN', '3', '2021-04-16 22:42:42', 13, NULL, NULL, b'01'),
+(114, 27, 1, 13, b'01', 'uploads/Members/1/27/attachments/5120032021033352.pdf', b'01', '2021-04-16 22:43:34', b'01', '1233', 'JSN', '3', '2021-04-16 22:43:34', 13, NULL, NULL, b'01'),
+(115, 39, 13, 1, b'01', 'uploads/Members/13/39/attachments/6826032021072434.pdf', b'01', '2021-04-16 22:44:40', b'01', '100', 'Krunal', '2', '2021-04-16 22:44:40', 1, NULL, NULL, b'01'),
+(116, 53, 13, 1, b'01', 'uploads/Members/13/53/attachments/9817042021090545.pdf', b'01', '2021-04-17 21:23:22', b'01', '2000', 'Gujarati', '1', '2021-04-17 21:20:32', 1, NULL, NULL, b'01'),
+(117, 32, 1, 1, b'01', 'uploads/Members/1/32/attachments/5926032021125653.pdf', b'01', '2021-04-18 12:37:05', b'01', '1222', 'IRON Man', '2', '2021-04-18 12:37:05', 1, NULL, NULL, b'01'),
+(118, 32, 1, 1, b'01', 'uploads/Members/1/32/attachments/6026032021125653.pdf', b'01', '2021-04-18 12:37:06', b'01', '1222', 'IRON Man', '2', '2021-04-18 12:37:06', 1, NULL, NULL, b'01'),
+(119, 32, 1, 1, b'01', 'uploads/Members/1/32/attachments/6126032021125653.pdf', b'01', '2021-04-18 12:37:06', b'01', '1222', 'IRON Man', '2', '2021-04-18 12:37:06', 1, NULL, NULL, b'01'),
+(120, 2, 13, 37, b'01', 'uploads/Members//13/2/attachments/3904032021040537.pdf', b'01', '2021-04-18 13:55:30', b'00', '0', 'cs', '2', '2021-04-18 13:55:30', 37, NULL, NULL, b'01'),
+(121, 27, 1, 37, b'01', 'uploads/Members/1/27/attachments/5120032021033352.pdf', b'01', '2021-04-18 14:03:32', b'01', '1233', 'JSN', '3', '2021-04-18 14:01:26', 37, NULL, NULL, b'01'),
+(122, 56, 37, 1, b'01', 'uploads/Members/37/56/attachments/10018042021103901.', b'00', '2021-04-18 14:15:00', b'01', '120', 'Enviroment Book', '1', '2021-04-18 14:15:00', 1, NULL, NULL, b'00'),
+(123, 53, 13, 1, b'01', 'uploads/Members/13/53/attachments/9817042021090545.pdf', b'01', '2021-04-18 14:16:24', b'01', '2000', 'Gujarati', '1', '2021-04-18 14:16:24', 1, NULL, NULL, b'01'),
+(124, 57, 13, 13, b'01', 'uploads/Members/13/57/attachments/10519042021032150.pdf', b'01', '2021-04-19 19:00:16', b'01', '1222', 'abcdef', '5', '2021-04-19 19:00:16', 13, NULL, NULL, b'01'),
+(125, 57, 13, 13, b'01', 'uploads/Members/13/57/attachments/10519042021032150.pdf', b'01', '2021-04-19 19:07:02', b'01', '1222', 'abcdef', '5', '2021-04-19 19:07:02', 13, NULL, NULL, b'01');
 
 -- --------------------------------------------------------
 
@@ -195,8 +223,10 @@ CREATE TABLE `notecategories` (
 INSERT INTO `notecategories` (`ID`, `Name`, `Description`, `CreatedDate`, `CreatedBy`, `ModifiedDate`, `ModifiedBy`, `IsActive`) VALUES
 (1, 'science', 'abcd efggefdvvhk', '2021-02-23 00:00:00', 1, '2021-02-23 00:00:00', 1, b'01'),
 (2, 'Commerce', 'sdvdbgfbg', '2021-02-23 00:00:00', 1, '2021-02-23 00:00:00', 1, b'01'),
-(3, 'MBA', 'ffdkfd aejfgsd', '2021-02-23 00:00:00', 1, '2021-02-23 00:00:00', 1, b'00'),
-(4, 'CS', 'This IS a field of company secratory', '2021-03-30 09:53:57', 23, NULL, NULL, b'01');
+(3, 'MCA', 'ffdkfd aejfgsd', '2021-02-23 00:00:00', 1, '2021-02-23 00:00:00', 1, b'00'),
+(4, 'CS', 'This IS a field of company secratory', '2021-03-30 09:53:57', 23, NULL, NULL, b'01'),
+(5, 'Mcom', 'mscit', '2021-04-18 08:39:00', 23, NULL, NULL, b'01'),
+(6, 'BCA', 'commerce field', '2021-04-18 08:52:16', 33, NULL, NULL, b'00');
 
 -- --------------------------------------------------------
 
@@ -222,7 +252,8 @@ CREATE TABLE `notetypes` (
 INSERT INTO `notetypes` (`ID`, `Name`, `Description`, `CreatedDate`, `CreatedBy`, `ModifiedDate`, `ModifiedBy`, `IsActive`) VALUES
 (1, 'val1', 'abdeeddf', '2021-02-23 00:00:00', 1, '2021-02-23 00:00:00', 1, b'01'),
 (2, 'val2', 'xdvvxcv', '2021-02-23 00:00:00', 1, '2021-02-23 00:00:00', 1, b'01'),
-(3, 'val4', 'this is a val3', '2021-03-30 10:09:23', 23, NULL, NULL, b'00');
+(3, 'val3', 'this is a val3', '2021-03-30 10:09:23', 23, NULL, NULL, b'01'),
+(4, 'ipsum', 'abcdefghijkl', '2021-04-18 08:41:09', 23, NULL, NULL, b'01');
 
 -- --------------------------------------------------------
 
@@ -299,7 +330,7 @@ CREATE TABLE `sellernotes` (
 
 INSERT INTO `sellernotes` (`ID`, `SellerID`, `Status`, `ActionedBy`, `AdminRemarks`, `PublishedDate`, `Title`, `Category`, `DisplayPicture`, `NoteType`, `NumberofPages`, `Description`, `UniversityName`, `Country`, `Course`, `CourseCode`, `Professor`, `IsPaid`, `SellingPrice`, `NotesPreview`, `CreatedDate`, `CreatedBy`, `ModifiedDate`, `ModifiedBy`, `IsActive`) VALUES
 (1, 13, 11, 1, 'nikhil is good', '2021-03-04 15:57:52', 'compute', 2, 'DP_04032021035752.png', 1, 1, 'lorem ipsum abcd', 'LJ', 1, 'gjdh', 'dav', 'asfgdf', b'00', '0', 'Preview_104032021034020.pdf', '2021-04-13 00:00:00', NULL, NULL, NULL, b'00'),
-(2, 13, 9, 23, 'nikhil is good', '2021-03-04 16:05:37', 'cs', 2, 'DP_04032021040537.png', 1, 1, 'lorem ipsum', 'LJ', 1, 'gjdh', 'dav', 'asfgdf', b'00', '0', 'Preview_104032021034020.pdf', NULL, NULL, NULL, NULL, b'01'),
+(2, 13, 9, 23, 'nikhil is good', '2021-03-04 16:05:37', 'cs', 2, 'DP_04032021040537.png', 1, 1, 'lorem ipsum', 'LJ', 1, 'gjdh', 'dav', 'asfgdf', b'00', '0', 'Preview_104032021034020.pdf', '2021-04-17 00:00:00', NULL, NULL, NULL, b'01'),
 (3, 13, 11, 1, 'note is worst', '2021-03-04 16:17:59', 'AI', 2, 'DP_04032021041759.png', 1, 1, 'abcdefg', 'LJ', 1, 'gjdh', 'dav', 'asfgdf', b'00', '0', 'Preview_104032021034020.pdf', NULL, NULL, NULL, NULL, b'00'),
 (4, 13, 11, 1, 'note is not good\r\n', '2021-03-04 16:20:53', 'social', 2, 'DP_04032021042053.png', 1, 1, 'abcdefg', 'LJ', 1, 'gjdh', 'dav', 'asfgdf', b'00', '0', 'Preview_104032021034020.pdf', NULL, NULL, NULL, NULL, b'00'),
 (11, 13, 9, 23, 'nikhil is good', '2021-03-04 16:36:16', 'Python Programming', 2, 'DP_04032021043616.png', 1, 1, 'ABCDEFGHIJKLMNOPQ', '1', 1, 'gjdh', 'dav', 'asfgdf', b'00', '0', 'Preview_104032021034020.pdf', '2021-03-04 00:00:00', NULL, NULL, NULL, b'01'),
@@ -326,8 +357,17 @@ INSERT INTO `sellernotes` (`ID`, `SellerID`, `Status`, `ActionedBy`, `AdminRemar
 (41, 29, 9, 23, NULL, '2021-04-09 00:00:00', 'Drawing', 3, 'DP_09042021042909.png', 2, 200, 'noyts zzfvchv zfxvgchvjk gchvb', 'bhyk fcx', 5, 'xyz', 'vgd', 'abcdefghj', b'01', '1500', 'Preview_09042021042909.pdf', '2021-04-09 16:29:09', NULL, NULL, NULL, b'01'),
 (42, 1, 10, 23, 'note good note', NULL, 'Painting', 3, 'DP_09042021104049.png', 3, 200, 'abcdefghijklmnopqrstuvwxyz', 'jf xgdhf', 5, ' fvh ', 'dav', 'sfgbx', b'01', '5000', 'Preview_09042021104049.pdf', '2021-04-09 22:40:49', NULL, NULL, NULL, b'01'),
 (43, 1, 10, 23, 'bad content', NULL, 'chair', 4, 'DP_10042021010154.png', 3, 200, 'abcdefghijklmnopqrstuvwxyz', 'aadsf', 3, 'gjdh ', 'lorem', '', b'00', '0', 'Preview_10042021010154.pdf', '2021-04-10 13:01:54', NULL, NULL, NULL, b'01'),
-(44, 1, 7, NULL, NULL, NULL, 'askhd', 1, 'DP_10042021051412.png', 3, 200, 'abcdrtg', 'fretrhr', 1, 'avbccc', 'dav', 'sfgbx', b'01', '100', 'Preview_10042021051412.pdf', '2021-04-10 17:14:12', NULL, NULL, NULL, b'01'),
-(45, 1, 7, NULL, NULL, NULL, 'cfgffghj', 4, 'DP_10042021052329.png', 3, 200, 'abcdefghijklmnopqrstuvwxyz', 'fretrhr', 1, 'lorem', 'dav', 'sfgbx', b'01', '12345', 'Preview_10042021052329.pdf', '2021-04-10 17:23:29', NULL, NULL, NULL, b'01');
+(44, 1, 9, 23, NULL, '2021-04-16 11:01:18', 'askhd', 1, 'DP_10042021051412.png', 3, 200, 'abcdrtg', 'fretrhr', 1, 'avbccc', 'dav', 'sfgbx', b'01', '100', 'Preview_10042021051412.pdf', '2021-04-10 17:14:12', NULL, NULL, NULL, b'01'),
+(45, 1, 9, 23, NULL, '2021-04-16 22:32:43', 'cfgffghj', 4, 'DP_10042021052329.png', 3, 200, 'abcdefghijklmnopqrstuvwxyz', 'fretrhr', 1, 'lorem', 'dav', 'sfgbx', b'01', '12345', 'Preview_10042021052329.pdf', '2021-04-10 17:23:29', NULL, NULL, NULL, b'01'),
+(46, 13, 10, 23, 'worst book', NULL, 'happy', 3, 'DP_12042021093655.png', 3, 200, 'abccdefghijklmnop', 'fretrhr', 5, 'lorem', '1230', 'sfgbx', b'01', '1222', 'Preview_12042021093655.pdf', '2021-04-12 09:36:55', NULL, NULL, NULL, b'01'),
+(48, 1, 10, 23, 'bad content', NULL, 'Jethalal', 3, 'DP_12042021102402.png', 3, 200, 'abcdefghijklmnopqrstuvwxyz', 'abvd', 2, 'gjdh ', '1234', 'ertghn', b'00', '0', 'Preview_12042021102402.pdf', '2021-04-12 10:24:02', NULL, NULL, NULL, b'01'),
+(49, 1, 9, 23, NULL, '2021-04-16 11:00:12', 'Bhide', 2, 'DP_16042021105340.png', 3, 200, 'abcdefghijkldfv', 'aadsf', 5, 'gjdh ', 'dav', 'ertghn', b'00', '0', 'Preview_16042021105340.pdf', '2021-04-16 10:53:40', NULL, NULL, NULL, b'01'),
+(51, 1, 11, 23, 'abcdefgh', '2021-04-16 22:32:34', 'Bhukhhadtal', 2, 'DP_16042021060739.png', 2, 2, 'abcdefghijklmnopqrstuvwxyz', '2', 2, 'fvh', 'dvf', 'ertghn', b'00', '0', 'Preview_16042021060739.pdf', '2021-04-16 18:07:39', NULL, NULL, NULL, b'00'),
+(52, 1, 9, 23, NULL, '2021-04-16 22:32:24', 'Microprocessor', 3, 'DP_16042021102613.png', 3, 200, 'asdfgn vgnjmkvn hjk ghjgkhl ghjk dhfjgk hj', 'abvd', 3, 'avbccc', 'gfdh', 'sfgbx', b'00', '0', 'Preview_16042021102613.pdf', '2021-04-16 22:26:13', NULL, NULL, NULL, b'01'),
+(53, 13, 9, 23, NULL, '2021-04-17 21:12:14', 'Gujarati', 1, 'DP_17042021090544.png', 2, 200, 'abcdefghijkl', 'jf xgdhf', 2, 'Cyber security', '88', 'ertghn', b'01', '2000', 'Preview_17042021090544.pdf', '2021-04-17 21:05:44', NULL, NULL, NULL, b'01'),
+(54, 1, 8, 23, NULL, NULL, 'Hanuman', 1, 'DP_18042021095230.png', 1, 200, 'abcdefghijkl', 'aadsf', 1, 'gjdh ', '90', 'vf bfg', b'00', '0', 'Preview_18042021095230.pdf', '2021-04-18 09:52:30', NULL, NULL, NULL, b'01'),
+(56, 37, 11, 23, 'note is not good', NULL, 'Enviroment Book', 1, 'DP_18042021020623.png', 1, 1, 'this note is for enviroment', '1', 1, 'Enviroment', '32', 'NIkhil', b'01', '120', 'Preview_18042021020623.pdf', '2021-04-18 14:06:23', NULL, NULL, NULL, b'00'),
+(57, 13, 7, NULL, NULL, NULL, 'abcdef', 5, 'DP_19042021065120.png', 4, 100, 'abcdefghijkl', 'lj', 4, 'fvh', 'lorem', 'asfgdf', b'01', '1222', 'Preview_19042021065120.pdf', '2021-04-19 18:51:20', NULL, NULL, NULL, b'01');
 
 -- --------------------------------------------------------
 
@@ -386,7 +426,19 @@ INSERT INTO `sellernotesattachments` (`ID`, `NoteID`, `FileName`, `FilePath`, `C
 (71, 42, '7109042021104049.pdf', 'uploads/Members/1/42/attachments/7109042021104049.pdf', NULL, NULL, NULL, NULL, b'01'),
 (72, 43, '7210042021010155.pdf', 'uploads/Members/1/43/attachments/7210042021010155.pdf', NULL, NULL, NULL, NULL, b'01'),
 (73, 44, '7310042021051412.pdf', 'uploads/Members/1/44/attachments/7310042021051412.pdf', NULL, NULL, NULL, NULL, b'01'),
-(74, 45, '7410042021052329.pdf', 'uploads/Members/1/45/attachments/7410042021052329.pdf', NULL, NULL, NULL, NULL, b'01');
+(74, 45, '7410042021052329.pdf', 'uploads/Members/1/45/attachments/7410042021052329.pdf', NULL, NULL, NULL, NULL, b'01'),
+(75, 46, '7512042021093655.pdf', 'uploads/Members/13/46/attachments/7512042021093655.pdf', NULL, NULL, NULL, NULL, b'01'),
+(77, 48, '7612042021102402.pdf', 'uploads/Members/1/48/attachments/7612042021102402.pdf', NULL, NULL, NULL, NULL, b'01'),
+(78, 49, '7816042021105340.pdf', 'uploads/Members/1/49/attachments/7816042021105340.pdf', NULL, NULL, NULL, NULL, b'01'),
+(79, 49, '7916042021105340.pdf', 'uploads/Members/1/49/attachments/7916042021105340.pdf', NULL, NULL, NULL, NULL, b'01'),
+(94, 51, '8016042021023808.pdf', 'uploads/Members/1/51/attachments/8016042021023808.pdf', NULL, NULL, NULL, NULL, b'00'),
+(95, 51, '9516042021023808.pdf', 'uploads/Members/1/51/attachments/9516042021023808.pdf', NULL, NULL, NULL, NULL, b'00'),
+(96, 51, '9616042021023808.pdf', 'uploads/Members/1/51/attachments/9616042021023808.pdf', NULL, NULL, NULL, NULL, b'00'),
+(97, 52, '9716042021102613.pdf', 'uploads/Members/1/52/attachments/9716042021102613.pdf', NULL, NULL, NULL, NULL, b'01'),
+(98, 53, '9817042021090545.pdf', 'uploads/Members/13/53/attachments/9817042021090545.pdf', NULL, NULL, NULL, NULL, b'01'),
+(99, 54, '9918042021095230.pdf', 'uploads/Members/1/54/attachments/9918042021095230.pdf', NULL, NULL, NULL, NULL, b'01'),
+(104, 56, '10018042021103901.', 'uploads/Members/37/56/attachments/10018042021103901.', NULL, NULL, NULL, NULL, b'01'),
+(106, 57, '10519042021032150.pdf', 'uploads/Members/13/57/attachments/10519042021032150.pdf', NULL, NULL, NULL, NULL, b'01');
 
 -- --------------------------------------------------------
 
@@ -412,7 +464,10 @@ CREATE TABLE `sellernotesreportedissues` (
 
 INSERT INTO `sellernotesreportedissues` (`ID`, `NoteID`, `ReportedByID`, `AgainstDownloadID`, `Remarks`, `CreatedDate`, `CreatedBy`, `ModifiedDate`, `ModifiedBy`) VALUES
 (4, 3, 1, 7, 'wrost language', '2021-03-19 18:30:43', 1, NULL, NULL),
-(6, 2, 25, 89, 'abcdefghijkl', '2021-03-26 17:49:23', 25, NULL, NULL);
+(6, 2, 25, 89, 'abcdefghijkl', '2021-03-26 17:49:23', 25, NULL, NULL),
+(7, 41, 1, 96, 'abcdefghijklmnopqrstuvwxyz', '2021-04-12 09:47:28', 1, NULL, NULL),
+(9, 45, 13, 109, 'abcdefghijk', '2021-04-18 09:21:14', 13, NULL, NULL),
+(10, 31, 13, 82, 'abcdefgh', '2021-04-18 09:21:38', 13, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -443,7 +498,12 @@ INSERT INTO `sellernotesreview` (`ID`, `NoteID`, `ReviewedByID`, `AgainstDownloa
 (2, 3, 1, 7, '5', 'book is good', '2021-03-19 17:43:07', 1, NULL, NULL, b'01'),
 (5, 4, 1, 8, '4', 'nice book', '2021-03-19 17:44:02', 1, NULL, NULL, b'01'),
 (6, 1, 24, 17, '1', 'nice book', '2021-03-22 16:56:09', 24, NULL, NULL, b'01'),
-(7, 1, 25, 88, '4', '4.5 Star book', '2021-03-26 17:47:24', 25, NULL, NULL, b'01');
+(7, 1, 25, 88, '4', '4.5 Star book', '2021-03-26 17:47:24', 25, NULL, NULL, b'01'),
+(9, 41, 1, 96, '4', 'notes is good', '2021-04-12 09:46:54', 1, NULL, NULL, b'01'),
+(10, 39, 1, 115, '5', 'abcdefghijklmnop', '2021-04-16 22:45:24', 1, NULL, NULL, b'01'),
+(11, 27, 13, 113, '5', 'abcdefghijklmno', '2021-04-18 09:20:44', 13, NULL, NULL, b'01'),
+(13, 2, 1, 6, '5', 'nice', '2021-04-18 09:23:44', 1, NULL, NULL, b'01'),
+(14, 2, 37, 120, '5', 'nice awesome book', '2021-04-18 13:56:30', 37, NULL, NULL, b'01');
 
 -- --------------------------------------------------------
 
@@ -511,13 +571,17 @@ CREATE TABLE `userprofile` (
 
 INSERT INTO `userprofile` (`ID`, `UserID`, `DOB`, `Gender`, `SecondaryEmailAddress`, `Countrycode`, `Phonenumber`, `ProfilePicture`, `AddressLine1`, `AddressLine2`, `City`, `State`, `ZipCode`, `Country`, `University`, `College`, `CreatedDate`, `CreatedBy`, `ModifiedDate`, `ModifyBy`) VALUES
 (18, 24, '2003-12-05', 2, '', '+91', '9104653449', 'DP_18032021044656.jpg', '3060,Ubhosher,Vanmali vanka ni Pole', '', 'Shahpur Ahmedabad', 'Gujarat', '380001', '1', 'GUJARAT TECHNOLOGICAL UNIVERSITY', 'H.B.Kapadia', '2021-03-18 09:16:56', 24, NULL, NULL),
-(19, 1, '2020-01-04', 1, '', '+91', '8460469135', 'DP_24032021055946.jpg', '3060,Ubhsosher', 'Vanmali vanka ni pole', 'Ahmedabad', 'Gujarat', '380001', '3', 'FOREIGN', 'Silveroack', '2021-03-18 10:13:57', 1, NULL, NULL),
-(20, 13, '2021-01-04', 1, '', '+91', '45465678', 'DP_18032021080754.jpg', '3060,Ubhosher,Vanmali vanka ni Pole', '', 'Shahpur Ahmedabad', 'Gujarat', '380001', '4', 'GUJARAT TECHNOLOGICAL UNIVERSITY', 'lj', '2021-03-18 12:37:54', 13, NULL, NULL),
-(21, 25, '2021-01-11', 1, '', '+91', '9104653449', 'DP_26032021011632.png', '3060,Ubhosher,Vanmali vanka ni Pole', '', 'Shahpur Ahmedabad', 'Gujarat', '380001', 'Select your country', 'GUJARAT TECHNOLOGICAL UNIVERSITY', 'lj', '2021-03-26 17:46:32', 25, NULL, NULL),
+(19, 1, '2020-01-04', 1, '', '+91', '8460469135', 'DP_24032021055946.jpg', '3060,Ubhsosher', 'Vanmali vanka ni pole', 'Ahmedabad', 'Gujarat', '380001', '3', 'FOREIGNer', 'Silveroack', '2021-03-18 10:13:57', 1, NULL, NULL),
+(20, 13, '2021-01-04', 1, '', '+91', '45465678', 'DP_16042021070630.png', '3060,Ubhosher,Vanmali vanka ni Pole', '', 'Shahpur Ahmedabad', 'Gujarat', '380001', '4', 'GUJARAT TECHNOLOGICAL UNIVERSITY', 'lj', '2021-03-18 12:37:54', 13, NULL, NULL),
+(21, 25, '2021-01-11', 1, '', '+91', '9104653449', 'DP_26032021011632.png', '3060,Ubhosher,Vanmali vanka ni Pole', '', 'Shahpur Ahmedabad', 'Gujarat', '380001', '4', 'GUJARAT TECHNOLOGICAL UNIVERSITY', 'lj', '2021-03-26 17:46:32', 25, NULL, NULL),
 (24, 26, NULL, NULL, 'abc@gmail.com', '91', '9825815254', 'DP_07042021112653.jpg', '', '', '', '', '', '', NULL, NULL, '2021-04-04 17:53:08', 23, NULL, NULL),
-(25, 23, NULL, NULL, 'nikhilvshah12274@gmail.com', '+91', '8460469135', 'DP_09042021070936.png', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL),
+(25, 23, NULL, NULL, 'nikhilvshah12274@gmail.com', '+91', '8460469135', 'DP_16042021070330.jpg', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL),
 (26, 28, NULL, NULL, '', '+91', '9998293980', NULL, '', '', '', '', '', '', NULL, NULL, '2021-04-09 13:53:54', 23, NULL, NULL),
-(27, 29, '2000-01-04', 1, '', '+91', '09104653449', 'DP_09042021125336.png', 'UBHOSHER SHAHPUR', '', 'Select', 'Gujarat', '380001', '5', 'GUJARAT TECHNOLOGICAL UNIVERSITY', 'Silveroack', '2021-04-09 16:23:36', 29, NULL, NULL);
+(27, 29, '2000-01-04', 1, '', '+91', '09104653449', 'DP_09042021125336.png', 'UBHOSHER SHAHPUR', '', 'Select', 'Gujarat', '380001', '5', 'GUJARAT TECHNOLOGICAL UNIVERSITY', 'Silveroack', '2021-04-09 16:23:36', 29, NULL, NULL),
+(28, 33, NULL, NULL, 'abc@gmail.com', '+91', '09104653449', 'DP_18042021052027.png', '', '', '', '', '', '', NULL, NULL, '2021-04-17 15:52:57', 23, NULL, NULL),
+(29, 36, NULL, NULL, '', '+61', '1234567', NULL, '', '', '', '', '', '', NULL, NULL, '2021-04-18 10:45:20', 23, NULL, NULL),
+(30, 35, '2000-01-04', 1, '', '+91', '8460469135', 'DP_18042021074624.png', 'Tatvahouse', 'S.G.Highway', 'Ahmedabad', 'Gujarat', '380001', '1', 'Deem', 'LDRP', '2021-04-18 11:16:24', 35, NULL, NULL),
+(31, 37, '2021-02-16', 1, '', '+91', '09104653449', 'DP_18042021102410.png', 'UBHOSHER SHAHPUR', 'shahpur', 'Select', 'Gujarat', '380001', '1', 'GTU', 'LJ', '2021-04-18 13:54:10', 37, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -557,7 +621,7 @@ CREATE TABLE `users` (
   `FirstName` varchar(50) NOT NULL,
   `LastName` varchar(50) NOT NULL,
   `EmailID` varchar(100) NOT NULL,
-  `Password` varchar(24) NOT NULL,
+  `Password` varchar(80) NOT NULL,
   `IsEmailVerified` bit(2) NOT NULL DEFAULT b'0',
   `CreatedDate` datetime DEFAULT NULL,
   `CreatedBy` int(11) DEFAULT NULL,
@@ -571,15 +635,20 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `RoleID`, `FirstName`, `LastName`, `EmailID`, `Password`, `IsEmailVerified`, `CreatedDate`, `CreatedBy`, `ModifiedDate`, `ModifiedBy`, `IsActive`) VALUES
-(1, 3, 'nikhil', 'shah', 'nikhilshah4120@gmail.com', 'Nikhil12275@', b'01', '2021-02-21 13:09:31', NULL, '2021-02-21 13:09:31', NULL, b'01'),
-(13, 3, 'nik', 'shah', 'nikhilvshah12274@gmail.com', 'Nikhil4120@', b'01', '2021-02-24 15:22:36', NULL, '2021-02-24 15:22:36', NULL, b'01'),
-(16, 3, 'nikhil', 'shah', 'interviewguide4@gmail.com', 'Nikhil12275@', b'00', '2021-02-27 15:37:31', NULL, '2021-02-27 15:37:31', NULL, b'01'),
-(23, 1, 'Nikhil', 'Shah', 'niks04446@gmail.com', 'Nikhil4120@', b'01', NULL, NULL, NULL, NULL, b'01'),
-(24, 3, 'Anjali', 'Shah', 'anjalishah5123@gmail.com', 'Anjali5123@', b'01', '2021-03-18 09:13:23', NULL, '2021-03-18 09:13:23', NULL, b'00'),
-(25, 3, 'John', 'pickard', 'malariadetectionsystem@gmail.com', 'Nikhil12275@', b'01', '2021-03-26 17:44:30', NULL, '2021-03-26 17:44:30', NULL, b'01'),
-(26, 2, 'vinod', 'shah', 'kefet18418@whyflkj.com', '1iavxSNh', b'01', '2021-04-04 17:53:08', 23, NULL, NULL, b'00'),
-(28, 2, 'Vivek', 'Chauhan', 'tamifob365@art2427.com', 'pj3rbNdx', b'01', '2021-04-09 13:53:54', 23, NULL, NULL, b'01'),
-(29, 3, 'xyz', 'abc', 'gimolek778@whyflkj.com', 'Abcd1234@', b'01', '2021-04-09 16:19:18', NULL, '2021-04-09 16:19:18', NULL, b'01');
+(1, 3, 'nikhil', 'shah', 'nikhilshah4120@gmail.com', '$2y$10$zJLvOUXtJ6zEOArGbHXM1eRrvnE8kjKRM1FB3FKjTObRZ4pJ9lR6a', b'01', '2021-02-21 13:09:31', NULL, '2021-02-21 13:09:31', NULL, b'01'),
+(13, 3, 'nik', 'shah', 'nikhilvshah12274@gmail.com', '$2y$10$LW29K2j/h5B5TgtAItvR2eToPJM3t8VwumZzxiFr8zTLW8Fhu9yYa', b'01', '2021-02-24 15:22:36', NULL, '2021-02-24 15:22:36', NULL, b'01'),
+(16, 3, 'nikhil', 'shah', 'interviewguide4@gmail.com', '$2y$10$LW29K2j/h5B5TgtAItvR2eToPJM3t8VwumZzxiFr8zTLW8Fhu9yYa', b'00', '2021-02-27 15:37:31', NULL, '2021-02-27 15:37:31', NULL, b'01'),
+(23, 1, 'Nikhil', 'Shah', 'niks04446@gmail.com', '$2y$10$dZvj7CNhh8Ma08sPTjgJ.O2KShJD5X6dZc4MKYmhxk9YFBBinWB3e', b'01', NULL, NULL, NULL, NULL, b'01'),
+(24, 3, 'Anjali', 'Shah', 'anjalishah5123@gmail.com', '$2y$10$LW29K2j/h5B5TgtAItvR2eToPJM3t8VwumZzxiFr8zTLW8Fhu9yYa', b'01', '2021-03-18 09:13:23', NULL, '2021-03-18 09:13:23', NULL, b'00'),
+(25, 3, 'John', 'pickard', 'malariadetectionsystem@gmail.com', '$2y$10$LW29K2j/h5B5TgtAItvR2eToPJM3t8VwumZzxiFr8zTLW8Fhu9yYa', b'01', '2021-03-26 17:44:30', NULL, '2021-03-26 17:44:30', NULL, b'01'),
+(26, 2, 'vinod', 'shah', 'kefet18418@whyflkj.com', '$2y$10$LW29K2j/h5B5TgtAItvR2eToPJM3t8VwumZzxiFr8zTLW8Fhu9yYa', b'01', '2021-04-04 17:53:08', 23, NULL, NULL, b'00'),
+(28, 2, 'Vivek', 'Chauhan', 'tamifob365@art2427.com', '$2y$10$LW29K2j/h5B5TgtAItvR2eToPJM3t8VwumZzxiFr8zTLW8Fhu9yYa', b'01', '2021-04-09 13:53:54', 23, NULL, NULL, b'01'),
+(29, 3, 'xyz', 'abc', 'gimolek778@whyflkj.com', '$2y$10$LW29K2j/h5B5TgtAItvR2eToPJM3t8VwumZzxiFr8zTLW8Fhu9yYa', b'01', '2021-04-09 16:19:18', NULL, '2021-04-09 16:19:18', NULL, b'01'),
+(32, 3, 'ANJALI', 'SHAH', 'hesape5247@whipjoy.com', '$2y$10$LW29K2j/h5B5TgtAItvR2eToPJM3t8VwumZzxiFr8zTLW8Fhu9yYa', b'01', '2021-04-17 14:17:37', NULL, '2021-04-17 14:17:37', NULL, b'01'),
+(33, 2, 'ATM', 'SHAH', 'beyal56014@zcai77.com', '$2y$10$rj43cKYSgD4z9zXkS1vhcOrOWiqfVodky0I9vN4RMEvVjxgAztpRy', b'00', '2021-04-17 15:52:57', 23, NULL, NULL, b'01'),
+(35, 3, 'Parth', 'Thakkar', 'dabot49826@zcai77.com', '$2y$10$a4js/TQYsfKKptDctrzVguCOXdg3EcGUG66OY3d.BULJUvSK/duVq', b'01', '2021-04-18 10:23:37', NULL, '2021-04-18 10:23:37', NULL, b'01'),
+(36, 2, 'thakkar', 'parth', 'tharpakar1@gmail.com', '$2y$10$M/HMjtRDf5Urh.Yzp16NRe1XwfK9T9RyegQylXFq0Pl9IPDyrcMDe', b'00', '2021-04-18 10:45:20', 23, NULL, NULL, b'01'),
+(37, 3, 'Khushal', 'Shah', 'nikhil@gmail.com', '$2y$10$jJuT3kySgnaTx1.UNzmDTuzxU0eN8l7/ahGwkP3.Dyhd5rh71946u', b'01', '2021-04-18 13:41:47', NULL, '2021-04-18 13:41:47', NULL, b'01');
 
 --
 -- Indexes for dumped tables
@@ -697,19 +766,19 @@ ALTER TABLE `countries`
 -- AUTO_INCREMENT for table `downloads`
 --
 ALTER TABLE `downloads`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 
 --
 -- AUTO_INCREMENT for table `notecategories`
 --
 ALTER TABLE `notecategories`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `notetypes`
 --
 ALTER TABLE `notetypes`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `referencedata`
@@ -721,25 +790,25 @@ ALTER TABLE `referencedata`
 -- AUTO_INCREMENT for table `sellernotes`
 --
 ALTER TABLE `sellernotes`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `sellernotesattachments`
 --
 ALTER TABLE `sellernotesattachments`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT for table `sellernotesreportedissues`
 --
 ALTER TABLE `sellernotesreportedissues`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `sellernotesreview`
 --
 ALTER TABLE `sellernotesreview`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `systemconfiguration`
@@ -751,7 +820,7 @@ ALTER TABLE `systemconfiguration`
 -- AUTO_INCREMENT for table `userprofile`
 --
 ALTER TABLE `userprofile`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `userroles`
@@ -763,7 +832,7 @@ ALTER TABLE `userroles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'PRIMARY KEY', AUTO_INCREMENT=30;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'PRIMARY KEY', AUTO_INCREMENT=38;
 
 --
 -- Constraints for dumped tables

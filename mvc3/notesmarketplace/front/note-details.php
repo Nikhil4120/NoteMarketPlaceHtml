@@ -4,19 +4,14 @@
 <?php
     session_start();
 ?>
-<?php
-    if(isset($_POST['logout'])){
-        session_destroy();
-        header('Location: login.php');
-    }
-?>
+
 <?php
     if(isset($_GET['note'])){
         $note = $_GET['note'];
-        $note_query = "SELECT * FROM sellernotes WHERE title = '{$note}'";
+        $note_query = "SELECT * FROM sellernotes WHERE id = $note";
         $select_note_query = mysqli_query($connection,$note_query);
         if(!($select_note_query)){
-            die("QUERY FAILED".mysqli.error($connection));
+            die("QUERY FAILED".mysqli_error($connection));
         }
         $row = mysqli_fetch_assoc($select_note_query);
         $title = $row['Title'];
@@ -30,7 +25,12 @@
         $country = $row['Country'];
         $coursecode = $row['CourseCode'];
         $publishdate = $row['PublishedDate'];
-        $publishdate = date('F j Y',strtotime($publishdate));
+        if($publishdate != ""){
+            $publishdate = date('F j Y',strtotime($publishdate));
+        }
+        else{
+            $publishdate = "NA";
+        }
         $professor = $row['Professor'];
         $pages = $row['NumberofPages'];
         $id = $row['ID'];
@@ -521,7 +521,7 @@
                 $(this).attr('data-toggle','modal').attr('data-target','#myModal');
                 $.ajax({
                     type: "POST",
-                    url: "note-details.php?note=<?php echo $title; ?>",
+                    url: "note-details.php?note=<?php echo $note; ?>",
                     data: {'paidnotes':'paidnotes'},
                     dataType: "text",
                     success: function (res) {

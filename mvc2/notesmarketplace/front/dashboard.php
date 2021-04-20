@@ -50,7 +50,7 @@
         if(!($delete_row_query)){
             die("QUERY FAILED".mysqli_error($connection));
         }
-        header("Location: /notesmarketplace/front/dashboard.php");
+        header("Location: dashboard.php");
     }
 ?>
 <body>

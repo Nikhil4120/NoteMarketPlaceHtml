@@ -37,7 +37,7 @@
 
 
      $subject = $firstname . $subject;
-    // // the message
+    
      $comment = "Hello,<br><br>" . $comment . "<br><h4> Regards,<br>" . $firstname."</h4>"; 
 
      $email_query = "SELECT * FROM systemconfiguration WHERE configurationkey = 'emailaddresses'";

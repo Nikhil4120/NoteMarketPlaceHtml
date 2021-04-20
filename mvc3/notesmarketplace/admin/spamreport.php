@@ -84,7 +84,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">SR NO.</th>
-                                <th scope="col">REPRTED BY</th>
+                                <th scope="col">REPORTED BY</th>
                                 <th scope="col">NOTE TITLE</th>
                                 <th scope="col">CATEGORY</th>
                                 <th scope="col">DATE EDITED</th>
@@ -129,7 +129,7 @@
                             <tr>
                                 <th scope="row"><?php echo $j++; ?></th>
                                 <td><?php echo $reportedfirstname . "" . $reportedlastname ;?></td>
-                                <td><?php echo $notetitle; ?></td>
+                                <td><a href="admin_notedetails.php?note=<?php echo $noteid; ?>" style="color:#6255a5"><?php echo $notetitle; ?></a></td>
                                 <td><?php echo $notecategory; ?></td>
                                 <td><?php echo $addeddate?></td>
                                 <td><?php echo $remarks?></td>

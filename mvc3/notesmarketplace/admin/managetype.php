@@ -203,7 +203,7 @@ if(isset($_GET['delete'])){
     </script>
     <script>
         $(function(){
-            $('.delete').click(function(){
+            $('table').on('click','.delete',function(){
                 if(confirm("Are You Confirm inactive this Type?")){
                     return true;
                 }

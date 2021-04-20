@@ -21,7 +21,8 @@
         $db_password = $row['Password'];
         $old_password = $_POST['oldpassword'];
         $new_password = $_POST['newpassword'];
-        if($db_password != $old_password){
+        $new_password = password_hash($new_password,PASSWORD_DEFAULT);
+        if(password_verify($db_password,$old_password)){
             echo "<script>alert('please enter your old password correct');</script>";
         } 
         else{
@@ -91,6 +92,7 @@
                                         <input type="password" class="form-control" id="confirm-password-field" placeholder="Enter your confirm Password " name="confirm password">
                                         <span toggle="#confirm-password-field" class="eye field-icon toggle-password"><img
                                             src="front/images/eye.png" alt="eye"></span>
+                                        <span id="validationpass" style="display:none;color:red">Password And Confirm Password not match</span>
                                       </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12">                                
@@ -115,6 +117,7 @@
             var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,24}$/;
             if(password.value != confirmpassword.value){
                 alert("password and confirm password do not match");
+                $('#validationpass').show();
                 return false;
             }
             if(password.value.match(decimal)) 
@@ -124,7 +127,7 @@
             }
             else
             { 
-                alert('Wrong Password!')
+                alert('Wrong Password format!');
                 return false;
             }
                 

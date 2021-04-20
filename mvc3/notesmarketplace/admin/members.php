@@ -77,7 +77,7 @@
                                 <img src="images/Dashboard/search.jpg" alt="search" class="search-icon">
                             </div>
                             <div id="search-btn">
-                                <button class="btn btn-search" type="submit">Search</button>
+                                <button class="btn btn-search" type="button">Search</button>
                             </div>
 
                         </form>

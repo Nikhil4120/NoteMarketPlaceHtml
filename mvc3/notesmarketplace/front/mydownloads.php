@@ -310,14 +310,14 @@
                                 
                                 <tr>
                                     <th scope="row"><?php echo $j++; ?></th>
-                                    <td><a href="note-details.php?note=<?php echo $title;?>"><?php echo $title ?></a></td>
+                                    <td><a href="note-details.php?note=<?php echo $noteid;?>"><?php echo $title ?></a></td>
                                     <td><?php echo $category_name ?></td>
                                     <td><?php echo $buyer_email; ?></td>
                                     
                                     <td><?php echo $IsPaid ?></td>
                                     <td><?php echo $sellingprice ?></td>
                                     <td><?php echo $time ?></td>
-                                    <td><a href="note-details.php?note=<?php echo $title;?>"><img src="images/eye.png"></a></td>
+                                    <td><a href="note-details.php?note=<?php echo $noteid;?>"><img src="images/eye.png"></a></td>
                                     <td>
                                     <div class="dropdown">
                                         <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/images/dots.png"></button>

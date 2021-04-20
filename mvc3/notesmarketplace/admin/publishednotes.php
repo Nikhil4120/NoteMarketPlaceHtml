@@ -106,7 +106,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12 col-12">
-                    ``<?php
+                    <?php
 
                             $select_seller = mysqli_query($connection,"SELECT DISTINCT(seller) AS seller FROM downloads");
                             if(!($select_seller)){
@@ -159,7 +159,7 @@
                                 id="search">
                             <img src="images/Dashboard/search.jpg" alt="search" class="search-icon"></div>
                             <div id="search-btn">
-                            <button class="btn btn-search" type="submit">Search</button></div>
+                            <button class="btn btn-search" type="button">Search</button></div>
 
                         </form>
                     </div>

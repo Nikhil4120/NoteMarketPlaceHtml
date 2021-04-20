@@ -33,28 +33,56 @@
         if(!($member_query)){
             die("QUERY FAILED".mysqli_error($connection));
         }
-        $member_row = mysqli_fetch_assoc($member_query);
-        $dob = $member_row['DOB'];
-        $dob = date('d-m-Y',strtotime($dob)); 
-        $phone = $member_row['Phonenumber'];
-        $college = $member_row['College'];
-        $add1 = $member_row['AddressLine1'];
-        $add2 = $member_row['AddressLine2'];
-        $city = $member_row['City'];
-        $state = $member_row['State'];
-        $country = $member_row['Country'];
-        $zipcode = $member_row['ZipCode'];
-        $profile_picture = $member_row['ProfilePicture'];
-        $country_query = mysqli_query($connection,"SELECT Name FROM countries WHERE ID = $country");
-        if(!($country_query)){
-            die("QUERY FAILED".mysqli_error($connection));
+        if(mysqli_num_rows($member_query)!=0){
+            $member_row = mysqli_fetch_assoc($member_query);
+            $dob = $member_row['DOB'];
+            $dob = date('d-m-Y',strtotime($dob)); 
+            $phone = $member_row['Phonenumber'];
+            $college = $member_row['College'];
+            $add1 = $member_row['AddressLine1'];
+            $add2 = $member_row['AddressLine2'];
+            $city = $member_row['City'];
+            $state = $member_row['State'];
+            $country = $member_row['Country'];
+            $zipcode = $member_row['ZipCode'];
+            $profile_picture = $member_row['ProfilePicture'];
+            $country_query = mysqli_query($connection,"SELECT Name FROM countries WHERE ID = $country");
+            if(!($country_query)){
+                die("QUERY FAILED".mysqli_error($connection));
+            }
+            $country_row = mysqli_fetch_row($country_query);
+            $country = $country_row[0];
         }
-        $country_row = mysqli_fetch_row($country_query);
-        $country = $country_row[0];
+        else{
+            $dob = "NA";
+            
+            $phone = "NA";
+            $college = "NA";
+            $add1 = "NA";
+            $add2 = "NA";
+            $city = "NA";
+            $state = "NA";
+            $country = "NA";
+            $zipcode = "NA";
+            $emptypic = mysqli_query($connection,"SELECT value FROM systemconfiguration WHERE configurationkey = 'defaultprofilepicture' ");
+            if(!($emptypic)){
+                die("QUERY FAILED".mysqli_error($connection));
+            }
+            $emptyrow = mysqli_fetch_row($emptypic);
+            $emptypic = $emptyrow[0];
+            $profile_picture = "";
+            
+            $country = "NA";
+        }
+        
     }
 
 ?>
 
+<?php
+    
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -90,7 +118,17 @@
 
                     <div class="col-lg-2 col-md-12 col-sm-12 col-12">
                         <div id="member-image">
+                            <?php
+                                if($profile_picture == ""){
+                                    echo "<img src='../uploads/Systemconfiguration/$emptypic' alt='client' class='member-img'>";
+                                }
+                                else{
+                            ?>
                             <img src="../uploads/Members/<?php echo $memberid;?>/<?php echo $profile_picture;?>" class="member-img">
+                            <?php
+                                }
+                            ?>
+                            
                         </div>
                     </div>
 
@@ -214,6 +252,7 @@
                         <?php
                             $j = 1;
                             while($row = mysqli_fetch_assoc($seller_table_query)){
+                                
                                 $title = $row['Title'];
                                 $category = $row['Category'];
                                 $cat_query = mysqli_query($connection,"SELECT Name FROM notecategories WHERE ID = $category");
@@ -260,7 +299,7 @@
                         <tr>
                             <th scope="row"><?php echo $j++; ?></th>
                             
-                            <td><?php echo $title; ?></td>
+                            <td><a href="admin_notedetails.php?note=<?php echo $noteid; ?>" style="color:#6255a5"><?php echo $title; ?></a></td>
                             <td><?php echo $category; ?></td>
                             <td><?php echo $status; ?></td>
                             <td><?php echo $count_download; ?></td>

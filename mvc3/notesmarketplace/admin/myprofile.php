@@ -177,7 +177,7 @@
 
                             <div class="form-group">
                                 <label for="secondary-Email">Email*</label>
-                                <input type="email" class="form-control" id="secondary-Email" <?php if(isset($flag)){echo "value=$secondaryemailaddress";}?>
+                                <input type="email" class="form-control" id="secondary-Email" <?php if(isset($flag)){echo "value='$secondaryemailaddress'";}?>
                                     placeholder="Enter your email" name="secondaryemail" required>
                             </div>
 

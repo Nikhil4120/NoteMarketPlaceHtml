@@ -10,11 +10,13 @@
         $firstname = $_POST['firstname'];
         $lastname = $_POST['lastname'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
-        $confirmpass = $_POST['confirmpass'];
+        $password = mysqli_real_escape_string($connection,$_POST['password']);
+        $confirmpass = mysqli_real_escape_string($connection,$_POST['confirmpass']);
+        
         $roleid = 3;
-
-
+        $hashpassword = password_hash($password,PASSWORD_DEFAULT);
+        
+        
         $query = "SELECT * FROM users WHERE emailid = '{$email}' ";
         $email_exist_query = mysqli_query($connection,$query);
         if(!($email_exist_query)){
@@ -24,16 +26,21 @@
             echo '<script>alert("email id already exist Please Enter Different Email Id")</script>';
         }
         else{
-            if($password != $confirmpass){
-                echo "<script>alert('Password and Confirm Password not match')</script>";
+            if($password !== $confirmpass){
+                
+                echo "<script>alert('Password and Confirm Password not match');</script>";
             }
             else{
+                
+
                 $query = "INSERT INTO users(roleid,firstname,lastname,emailid,Password,createddate,modifieddate)";
-                $query .= "VALUES($roleid,'{$firstname}','{$lastname}','{$email}','{$password}',now(),now())";
+                $query .= "VALUES($roleid,'{$firstname}','{$lastname}','{$email}','{$hashpassword}',now(),now())";
                 $signup_query = mysqli_query($connection,$query);
                 if(!($signup_query)){
                     die("QUERY FAILED" . mysqli_error($connection));
                 }
+                $host = $_SERVER['HTTP_HOST'];
+                $path = rtrim(dirname($_SERVER['PHP_SELF']),"/\\");            
                 $token = $email;
                 $body = "HELLO <h1>" . $firstname . " " .  $lastname . ",<br><br></h1>";
                 $body .= "<p>Thank you for signing up with us. Please click on below link to verify your email address and to do login</p><br>";
@@ -59,7 +66,7 @@
                     </tr>
                     <tr style='height: 120px;font-size: 16px;font-weight: 400;line-height: 22px;color: #333333;margin-bottom: 50px;'>
                         <td style='text-align: center;'>
-                            <button class='btn btn-verify' style='width: 100% !important;height:50px;font-family: Open Sans; font-size: 18px;font-weight: 600;line-height: 22px;color: #fff;background-color: #6255a5;border-radius: 3px;'><a class='btn' href='http://localhost/notesmarketplace/front/activation.php?token=$token' role='button' style='color: #fff; text-decoration: none; text-transform: uppercase;'>Verify email address</a>
+                            <button class='btn btn-verify' style='width: 100% !important;height:50px;font-family: Open Sans; font-size: 18px;font-weight: 600;line-height: 22px;color: #fff;background-color: #6255a5;border-radius: 3px;'><a class='btn' href='http://$host$path/activation.php?token=$token' role='button' style='color: #fff; text-decoration: none; text-transform: uppercase;'>Verify email address</a>
                             </button>
                         </td>
                     </tr>
@@ -169,6 +176,7 @@
                                         <input type="password" class="form-control" id="confirm-password-field" placeholder="Enter your confirm Password " name="confirmpass" required >
                                         <span toggle="#confirm-password-field" class="eye field-icon toggle-password"><img
                                             src="images/eye.png" alt="eye"></span>
+                                        <span id="validationpass" style="display:none;color:red">Password And Confirm Password not match</span>
                                       </div>
                                 </div>
 
@@ -201,6 +209,7 @@
             var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,24}$/;
             if(password.value != confirmpassword.value){
                 alert("password and confirm password do not match");
+                $('#validationpass').show();
                 return false;
             }
             if(password.value.match(decimal)) 

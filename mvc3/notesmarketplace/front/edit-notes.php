@@ -97,6 +97,8 @@
             $preview_cv_tmp = $_FILES['preview_cv']['tmp_name'];
             $accepted_image = array('png','jpg','jpeg');
             $accepted_pdf = array('pdf');
+            $notename = $_FILES['notes']['name'];
+            $notenametmp = $_FILES['notes']['tmp_name'];
             if(!empty($_FILES['profile_picture']['tmp_name'])){
                 
                 $profile_picture_ext = pathinfo( $_FILES["profile_picture"]["name"], PATHINFO_EXTENSION ); 
@@ -133,9 +135,9 @@
             $update_query = "UPDATE sellernotes SET title = '{$save_title}', ";
             $update_query .= "category = '{$save_category}', ";
             $update_query .= "notetype = '{$save_type}', ";
-            $update_query .= "NumberofPages = '{$save_type}', ";
-            $update_query .= "Country = '{$save_type}', ";
-            $update_query .= "UniversityName = '{$save_type}', ";
+            $update_query .= "NumberofPages = '{$save_pages}', ";
+            $update_query .= "Country = '{$save_country}', ";
+            $update_query .= "UniversityName = '{$save_institution_name}', ";
             $update_query .= "Course = '{$save_course}', ";
             $update_query .= "CourseCode = '{$save_course_code}', ";
             $update_query .= "Professor = '{$save_professor}', ";
@@ -148,7 +150,45 @@
             if(!($update_select_query)){
                 die("QUERY FAILED".mysqli_error($connection));
             }
-
+            if($notename[0] != "" ){
+                $select_attachment = mysqli_query($connection,"SELECT * FROM sellernotesattachments WHERE noteid = $note_id");
+                if(!($select_attachment)){
+                    die("QUERY FAILED".mysqli_error($connection));
+                }
+                while($attachmentrow = mysqli_fetch_assoc($select_attachment)){
+                    $attachmentpath = $attachmentrow['FilePath'];
+                    $unlinkpath = "../" . $attachmentpath;
+                    unlink($unlinkpath);
+                }
+                $oldattachmentdelete = mysqli_query($connection,"DELETE FROM sellernotesattachments WHERE noteid = $note_id");
+                if(!($oldattachmentdelete)){
+                    die("QUERY FAILED".mysqli_error($connection));
+                }
+                $i =0;
+                        
+                        while($i<count($_FILES['notes']['name'])){
+    
+                            $select_attachment = "SELECT max(ID) AS ID FROM sellernotesattachments";
+                            $select_notes_attachment = mysqli_query($connection,$select_attachment);
+                            if(!($select_notes_attachment)){
+                                die("QUERY FAILED" . mysqli_error($connection));
+                            }
+                            $select_attachment_row = mysqli_fetch_assoc($select_notes_attachment);
+                            $attachment_id = $select_attachment_row['ID'] + 1;
+                            $notes = $_FILES['notes']['name'][$i];
+                            $notes_ext = pathinfo( $_FILES["notes"]["name"][$i], PATHINFO_EXTENSION ); 
+                            $notes = $attachment_id . date("dmYhis") ."." . $notes_ext;
+                            $notes_tmp = $_FILES['notes']['tmp_name'][$i];
+                            $insert_notes = "INSERT INTO sellernotesattachments(noteid,FileName,FilePath)VALUES($note_id,'{$notes}','uploads/Members/$sellerid/$note_id/attachments/$notes')";
+                            $insert_notes_query = mysqli_query($connection,$insert_notes);
+                            if(!($insert_notes_query)){
+                                die("QUERY FAILED".mysqli_error($connection));
+                            }
+                            move_uploaded_file($_FILES['notes']['tmp_name'][$i],"../uploads/Members/$sellerid/$note_id/attachments/$notes");
+                            $i++;
+                        }
+            }
+            
         }        
 
         if(isset($_POST['publish'])){
@@ -214,7 +254,7 @@
                         echo "<script>alert('something went wrong');</script>";
                     }
                     else{
-                        echo "<script>window.location.href='/notesmarketplace/front/dashboard.php';</script>";
+                        echo "<script>window.location.href='dashboard.php';</script>";
                     }
                 
             ?>
@@ -466,7 +506,7 @@
                                     <label for="paid" id="paid-lbl">Paid</label>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-12">
-                                    <label for="sell-price">Sell Price</label>
+                                    <label for="sell-price" id="sell_price">Sell Price</label>
                                 <input type="text" class="form-control" id="sell-price"
                                     placeholder="Enter your price" name="sell_price" <?php if(isset($flag)){echo "value='$sell_price'";}?>>
 
@@ -514,15 +554,19 @@
             if($("input[type=radio]:checked").val() == 0 ){
                 $('#sell-price').css('display','none');
                 $('#upload-file').prop("required",false);
+                $('#sell_price').css('display','none');
             }
             $("input[type=radio]").change(function(){
                 var a = $(this).val();
                 if(a == 0){
-                    $('#sell-price').css('display','none');
+                    $('#sell-price').css('display','none').prop("required",false);
                     $('#upload-file').prop("required",false);
+                    $('#sell_price').css('display','none');
                 }
                 else{
                     $('#sell-price').prop("required",true).css('display','block');
+                    $('#sell_price').css('display','block');
+                    
                     
                 }
             });

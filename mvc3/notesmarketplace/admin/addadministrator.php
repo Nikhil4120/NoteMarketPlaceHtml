@@ -79,6 +79,7 @@
             }
             else{
                 $session_id = $_SESSION['ID'];
+                $password = password_hash($password,PASSWORD_DEFAULT);
                 $insert_user_query = "INSERT INTO users(roleid,firstname,lastname,emailid,Password,createddate,createdby)";
                 $insert_user_query .= "VALUES(2,'{$firstname}','{$lastname}','{$email}','{$password}',now(),$session_id)";
                 $insert_user_query = mysqli_query($connection,$insert_user_query);
@@ -198,7 +199,7 @@
                                 <div class="form-group">
 
                                     <input type="text" class="form-control" id="phone_no" placeholder="Enter your phone no." name="phone" <?php if(isset($flag)){echo "value='$editphone'"; }?>
-                                        required>
+                                        required pattern="[0-9]+" title="accept only digits">
                                 </div>
                             </div>
                             

@@ -282,7 +282,7 @@
                                 <div class="form-group">
                                     <label for="coutry" id="seller-label">Country</label>
                                     <select id="country" class="form-control custom-select" name="country">
-                                        <option selected>Select your country</option>
+                                        <option value="" selected>Select your country</option>
                                         <?php
 
                                         $query = "SELECT * FROM countries";

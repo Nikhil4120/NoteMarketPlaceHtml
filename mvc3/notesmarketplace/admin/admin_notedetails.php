@@ -35,7 +35,13 @@ if(isset($_GET['note'])){
         $country = $row['Country'];
         $coursecode = $row['CourseCode'];
         $publishdate = $row['PublishedDate'];
-        $publishdate = date('F j Y',strtotime($publishdate));
+        if($publishdate != ""){
+            $publishdate = date('F j Y',strtotime($publishdate));
+        }
+        else{
+            $publishdate = "NA";
+        }
+        
         $professor = $row['Professor'];
         $pages = $row['NumberofPages'];
         $id = $row['ID'];
@@ -90,7 +96,7 @@ if(isset($_GET['note'])){
                         <div class="row">
                             <div class="col-lg-5 col-md-4 col-sm-5 col-12">
                                 <div id="notes-img">
-                                    <img src="images/notedetails/1.jpg" alt="note-img" class="img-fluid">
+                                    <img src="../uploads/Members/<?php echo $sellerid . '/' . $id . '/' . $DisplayPicture ; ?>" alt="note-img" class="img-fluid">
                                 </div>
                             </div>
                             <div class="col-lg-7 col-md-8 col-sm-7 col-12">
@@ -155,7 +161,7 @@ if(isset($_GET['note'])){
                                 <div class="col-md-6 col-sm-6 col-6 text-right"><span class="value"><?php echo $pages; ?></span></div>
                                 <div class="col-md-6 col-sm-6 col-6"><span class="name">Approoved date</span></div>
                                 <div class="col-md-6 col-sm-6 col-6 text-right"><span class="value"><?php echo $publishdate; ?>
-                                        2020</span></div>
+                                        </span></div>
                                 <div class="col-md-6 col-sm-6 col-6"><span class="name">Rating</span></div>
                                 <?php
                                 

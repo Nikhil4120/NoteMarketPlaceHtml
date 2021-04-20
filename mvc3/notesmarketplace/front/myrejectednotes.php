@@ -129,7 +129,7 @@
                     </div>
                 </div>
                 <?php
-                    $query = "SELECT sellernotes.title AS Title,Name,sellernotes.id AS ID FROM sellernotes LEFT JOIN notecategories ON sellernotes.category = notecategories.ID  WHERE status = 10 AND sellerid = $user_id";
+                    $query = "SELECT sellernotes.title AS Title,Name,sellernotes.id AS ID,AdminRemarks FROM sellernotes LEFT JOIN notecategories ON sellernotes.category = notecategories.ID  WHERE status = 10 AND sellerid = $user_id";
                     $select_query = mysqli_query($connection,$query);
                     if(!($select_query)){
                         die("QUERY FAILED".mysqli_error($connection));
@@ -157,12 +157,13 @@
                                         $title = $row['Title'];
                                         $category = $row['Name'];
                                         $noteid = $row['ID'];
+                                        $remarks = $row['AdminRemarks'];
                                 ?>
                                 <tr>
                                 <th scope="row"><?php echo $j++;?></th>
-                                    <td><a href="note-details.php?note=<?php echo $title;?>"><?php echo $title ?></a></td>
+                                    <td><a href="note-details.php?note=<?php echo $noteid;?>"><?php echo $title ?></a></td>
                                     <td><?php echo $category;?></td>
-                                    <td>lorem ipsum is simply dummy text</td>
+                                    <td><?php echo $remarks;?></td>
                                     <td>clone</td>
 
                                     <td>

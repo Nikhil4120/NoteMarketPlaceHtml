@@ -40,6 +40,7 @@
             $mail->Body = $body;
             $flag = 1;   
             if($mail->send()){
+                $password = password_hash($password,PASSWORD_DEFAULT);
                 $query = "UPDATE users SET Password = '{$password}' WHERE emailid = '{$email}'";
                 $update_password_query = mysqli_query($connection,$query);
                 if(!($update_password_query)){

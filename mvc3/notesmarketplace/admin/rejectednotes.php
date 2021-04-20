@@ -179,7 +179,7 @@ if(isset($_GET['approve'])){
                             <th scope="row"><?php echo $j++; ?></th>
                             <td><a href="admin_notedetails.php?note=<?php echo $noteid; ?>" style="color:#6255a5"><?php echo $title; ?></a></td>
                             <td><?php echo $category; ?></td>
-                            <td><?php echo $seller_firstname; ?> <?php echo $seller_lastname; ?><a href="memberdetail.php?id=<?php echo $seller;?>"><img src="images/eye.png"></a></td>
+                            <td><?php echo $seller_firstname; ?> <?php echo $seller_lastname; ?><a href="memberdetail.php?id=<?php echo $sellerid;?>"><img src="images/eye.png"></a></td>
                             <td><?php echo $createddate; ?></td>
                             <td><?php echo $admin_firstname; ?> <?php echo $admin_lastname; ?></td>
                             

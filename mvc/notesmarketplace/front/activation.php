@@ -16,15 +16,15 @@ if(isset($_GET['token'])) {
     if($query) {
         if(isset($_SESSION['msg'])){
             $_SESSION['msg'] = "Account updated successfully";
-            header('location: /notesmarketplace/front/login.php');
+            header('location: login.php');
         }else {
             $_SESSION['msg'] = "You are logged out.";
-            header('location:front/login.php');
+            header('location: login.php');
         }
     }else {
         
         $_SESSION['msg'] = "Account not updated"; 
-        header('location:login.php'); 
+        header('location: login.php'); 
     }
 }
 ?>

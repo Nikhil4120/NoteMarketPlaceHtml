@@ -172,6 +172,8 @@ li.active a{
     -moz-appearance: none;
     appearance: none;
     background-color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
 }
 
