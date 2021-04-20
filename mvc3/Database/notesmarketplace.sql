@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2021 at 11:03 AM
+-- Generation Time: Apr 20, 2021 at 11:25 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.26
 
@@ -379,7 +379,7 @@ CREATE TABLE `sellernotesattachments` (
   `ID` int(11) NOT NULL,
   `NoteID` int(11) NOT NULL,
   `FileName` varchar(100) NOT NULL,
-  `FilePath` varchar(1000) NOT NULL,
+  `FilePath` varchar(500) NOT NULL,
   `CreatedDate` datetime DEFAULT NULL,
   `CreatedBy` int(11) DEFAULT NULL,
   `ModifiedDate` datetime DEFAULT NULL,
